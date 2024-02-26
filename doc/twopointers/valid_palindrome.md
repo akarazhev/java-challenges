@@ -8,7 +8,7 @@ Write a function that takes a string, s, as an input and determines whether or n
 
 ### Constraints:
 
-- 1 ≤ **s.length** ≤ 2 * 10 ^ 5
+- 1 ≤ **s.length** ≤ 2 * 10^5
 - The string **s** will contain English uppercase and lowercase letters, digits, and spaces.
 
 ## Examples
