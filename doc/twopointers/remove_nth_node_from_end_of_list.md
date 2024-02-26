@@ -44,3 +44,8 @@ Input: **n = 4**
 Output:
 
 40 -> 30 -> 20 -> NULL
+
+## Solution
+
+The solution is: [RemoveNthLastNode.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNode.java "RemoveNthLastNode.java").
+Tests are: [RemoveNthLastNodeTask.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNodeTask.java "RemoveNthLastNodeTask.java").
