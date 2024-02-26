@@ -11,4 +11,16 @@ public class LinkedListNode {
         this.data = data;
         this.next = null;
     }
+
+    public String asList() {
+        StringBuilder list = new StringBuilder();
+        list.append(data);
+        LinkedListNode node = next;
+        while (node != null) {
+            list.append("->").append(node.data);
+            node = node.next;
+        }
+
+        return list.toString();
+    }
 }

@@ -13,7 +13,22 @@ public class RemoveNthLastNode {
      * @return the final list
      */
     public static LinkedListNode removeNthLastNode(LinkedListNode head, int n) {
-        // Replace this placeholder return statement with your code
+        LinkedListNode right = head;
+        for (int i = 0; i < n; i++) {
+            right = right.next;
+        }
+
+        if (right == null) {
+            return head != null ? head.next : null;
+        }
+
+        LinkedListNode left = head;
+        while (right.next != null) {
+            right = right.next;
+            left = left.next;
+        }
+
+        left.next = left.next.next;
         return head;
     }
 }
