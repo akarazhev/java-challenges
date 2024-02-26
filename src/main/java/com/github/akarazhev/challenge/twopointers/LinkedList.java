@@ -20,7 +20,7 @@ public class LinkedList {
         }
     }
     // createLinkedList method will create the linked list using the
-    // given integer array with the help of InsertAthead method.
+    // given integer array with the help of InsertAtHead method.
     public void createLinkedList(int[] lst) {
         for (int i = lst.length - 1; i >= 0; i--) {
             LinkedListNode newNode = new LinkedListNode(lst[i]);

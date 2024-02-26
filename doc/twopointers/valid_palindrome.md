@@ -21,5 +21,5 @@ Output: **FALSE**
 
 ## Solution
 
-The solution is: [ValidPalindrome.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/ValidPalindrome.java "ValidPalindrome.java").
-Tests are: [ValidPalindromeTest.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/ValidPalindromeTest.java "ValidPalindromeTest.java").
+The solution is here: [ValidPalindrome.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/ValidPalindrome.java "ValidPalindrome.java").
+Tests are here: [ValidPalindromeTest.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/ValidPalindromeTest.java "ValidPalindromeTest.java").

@@ -47,5 +47,5 @@ Output:
 
 ## Solution
 
-The solution is: [RemoveNthLastNode.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNode.java "RemoveNthLastNode.java").
-Tests are: [RemoveNthLastNodeTask.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNodeTask.java "RemoveNthLastNodeTask.java").
+The solution is here: [RemoveNthLastNode.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNode.java "RemoveNthLastNode.java").
+Tests are here: [RemoveNthLastNodeTest.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNodeTest.java "RemoveNthLastNodeTest.java").
