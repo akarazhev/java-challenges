@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.akarazhev</groupId>
+    <artifactId>java-challenges</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <name>java-challenges</name>
+    <description>Algorithms Structures Patterns</description>
+    <url>http://akarazhev.github.io/java-challenges</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
+        <maven.surefire.plugin>3.1.2</maven.surefire.plugin>
+        <junit.version>5.10.0</junit.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Andrey Karazhev</name>
+            <email>karazhev@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/akarazhev/java-challenges</url>
+        <connection>scm:git:git://github.com/akarazhev/java-challenges.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:akarazhev/java-challenges.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencies>
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
