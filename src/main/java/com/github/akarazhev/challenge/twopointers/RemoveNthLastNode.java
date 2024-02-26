@@ -3,7 +3,7 @@ package com.github.akarazhev.challenge.twopointers;
 /**
  * Provides <code>Remove nth Node from End of List</code> solution.
  */
-public class ReverseLinkedList {
+public class RemoveNthLastNode {
 
     /**
      * This function takes a head pointer of the list, and n as the position to remove from end of the list.
