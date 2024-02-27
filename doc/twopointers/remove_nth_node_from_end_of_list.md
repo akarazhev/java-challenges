@@ -49,3 +49,13 @@ Output:
 
 The solution is here: [RemoveNthLastNode.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNode.java "RemoveNthLastNode.java").
 Tests are here: [RemoveNthLastNodeTest.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/RemoveNthLastNodeTest.java "RemoveNthLastNodeTest.java").
+
+## Complexity
+
+### Time complexity
+
+The time complexity is _O_(_n_), where _n_ is the number of nodes in the linked list.
+
+### Space complexity
+
+The space complexity is _O_(1) because we use constant space to store two pointers.

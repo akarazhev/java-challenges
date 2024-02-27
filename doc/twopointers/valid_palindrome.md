@@ -28,9 +28,9 @@ Tests are here: [ValidPalindromeTest.java](../../src/test/java/com/github/akaraz
 
 ### Time complexity
 
-The time complexity is _O(n)_ where _n_ is the number of characters in the string. However, the algorithm will only run
-_(n/2)_ times, since two pointers are traversing toward each other.
+The time complexity is _O_(_n_) where _n_ is the number of characters in the string. However, the algorithm will only run
+(_n_/2) times, since two pointers are traversing toward each other.
 
 ### Space complexity
 
-The space complexity is _O(1)_, since we use constant space to store two indexes.
+The space complexity is _O_(1), since we use constant space to store two indexes.
