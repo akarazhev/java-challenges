@@ -23,3 +23,14 @@ Output: **FALSE**
 
 The solution is here: [ValidPalindrome.java](../../src/main/java/com/github/akarazhev/challenge/twopointers/ValidPalindrome.java "ValidPalindrome.java").
 Tests are here: [ValidPalindromeTest.java](../../src/test/java/com/github/akarazhev/challenge/twopointers/ValidPalindromeTest.java "ValidPalindromeTest.java").
+
+## Complexity
+
+### Time complexity
+
+The time complexity is _O(n)_ where _n_ is the number of characters in the string. However, the algorithm will only run
+_(n/2)_ times, since two pointers are traversing toward each other.
+
+### Space complexity
+
+The space complexity is _O(1)_, since we use constant space to store two indexes.
