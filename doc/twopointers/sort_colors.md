@@ -19,14 +19,17 @@ and blue. The function should return the same array.
 
 ## Examples
 
-Input: 1, 0, 2, 1, 2, 2 
-Output: 0, 1, 1, 2, 2, 2
+**Input**: 1, 0, 2, 1, 2, 2 
 
-Input: 0, 1, 1, 2, 0, 2, 0, 2, 1, 2
-Output: 0, 0, 0, 1, 1, 1, 2, 2, 2, 2
+**Output**: 0, 1, 1, 2, 2, 2
 
-Input: 0
-Output: 0
+**Input**: 0, 1, 1, 2, 0, 2, 0, 2, 1, 2
+
+**Output**: 0, 0, 0, 1, 1, 1, 2, 2, 2, 2
+
+**Input**: 0
+
+**Output**: 0
 
 ## Solution
 
