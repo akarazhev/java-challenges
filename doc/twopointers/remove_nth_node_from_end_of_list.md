@@ -2,7 +2,7 @@
 
 ## Statement
 
-Given a singly linked list, remove the nth node from the end of the list and return its head.
+Given a singly linked list, remove the _nth_ node from the end of the list and return its head.
 
 ### Constraints:
 
@@ -13,37 +13,21 @@ Given a singly linked list, remove the nth node from the end of the list and ret
 
 ## Examples
 
-Input: **n = 1**
+**Input**: **n = 1**, 43 -> 68 -> 11 -> 5 -> 69 -> 37 -> 70 -> NULL
 
-43 -> 68 -> 11 -> 5 -> 69 -> 37 -> **70** -> NULL
+**Output**: 43 -> 68 -> 11 -> 5 -> 69 -> 37 -> NULL
 
-Output:
+**Input**: **n = 3**, 23 -> 28 -> 10 -> 5 -> 67 -> 39 -> 70 -> NULL
 
-43 -> 68 -> 11 -> 5 -> 69 -> 37 -> NULL
+**Output**: 23 -> 28 -> 10 -> 5 -> 39 -> 70 -> NULL
 
-Input: **n = 3**
+**Input**: **n = 5**, 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> NULL
 
-23 -> 28 -> 10 -> 5 -> **67** -> 39 -> 70 -> NULL
+**Output**: 1 -> 2 -> 4 -> 5 -> 6 -> 7 -> NULL
 
-Output:
+**Input**: **n = 4**, 50 -> 40 -> 30 -> 20 -> NULL
 
-23 -> 28 -> 10 -> 5 -> 39 -> 70 -> NULL
-
-Input: **n = 5**
-
-1 -> 2 -> **3** -> 4 -> 5 -> 6 -> 7 -> NULL
-
-Output:
-
-1 -> 2 -> 4 -> 5 -> 6 -> 7 -> NULL
-
-Input: **n = 4**
-
-**50** -> 40 -> 30 -> 20 -> NULL
-
-Output:
-
-40 -> 30 -> 20 -> NULL
+**Output**: 40 -> 30 -> 20 -> NULL
 
 ## Solution
 
