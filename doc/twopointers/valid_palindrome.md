@@ -2,7 +2,7 @@
 
 ## Statement
 
-Write a function that takes a string, s, as an input and determines whether or not it is a palindrome.
+Write a function that takes a string, **s**, as an input and determines whether or not it is a palindrome.
 
 > Note: A **palindrome** is a word, phrase, or sequence of characters that reads the same backward as forward.
 
@@ -13,11 +13,13 @@ Write a function that takes a string, s, as an input and determines whether or n
 
 ## Examples
 
-Input: **ABCBA**
-Output: **TRUE**
+**Input**: ABCBA
 
-Input: **ABCCA**
-Output: **FALSE**
+**Output**: TRUE
+
+**Input**: ABCCA
+
+**Output**: FALSE
 
 ## Solution
 
