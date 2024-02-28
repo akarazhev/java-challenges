@@ -40,11 +40,11 @@ Tests are here: [SortColorsTest.java](../../src/test/java/com/github/akarazhev/c
 
 ### Time complexity
 
--
+The time complexity of this solution is _O_(_n_), since we’re only traversing the array once.
 
 ### Space complexity
 
-- 
+The space complexity of this solution is _O_(1), since no extra space is used.
 
 <hr>
 
