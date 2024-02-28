@@ -10,6 +10,12 @@ a variant of the Two Pointers pattern, where the two pointers move at different 
 list in a way that solves the given problem. After completing this module, we will have learned how to use this set of 
 related patterns to solve a diverse range of problems.
 
+Objectives:
+- Hands-on experience with using the Two Pointers pattern
+- A working knowledge of the Fast and Slow Pointers pattern
+- Hands-on experience with using the Modified Binary Search pattern
+- The ability to choose the most appropriate of these three patterns to solve a new problem
+
 ### Two Pointers
 
 - [Introduction](doc/twopointers/introduction.md "Introduction")
@@ -18,6 +24,9 @@ related patterns to solve a diverse range of problems.
 - [Sort Colors](doc/twopointers/sort_colors.md "Sort Colors")
 
 ### Fast and Slow Pointers
+
+- [Introduction](doc/fastandslowpointers/introduction.md "Introduction")
+- [happy Number](doc/fastandslowpointers/happy_number.md "happy Number Task")
 
 ### Modified Binary Search
 
