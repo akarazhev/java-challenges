@@ -42,7 +42,7 @@ The time complexity is _O_(_n_), where _n_ is the number of nodes in the linked 
 
 ### Space complexity
 
-The space complexity is _O_(1) because we use constant space to store two pointers.
+The space complexity is _O_(1), because we use constant space to store two pointers.
 
 <hr>
 
