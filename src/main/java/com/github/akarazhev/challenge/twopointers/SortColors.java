@@ -7,8 +7,8 @@ public class SortColors {
     /**
      * This function takes an array of colors and sort it.
      *
-     * @param colors the list of array
-     * @return the sorted array
+     * @param colors the list of array.
+     * @return the sorted array.
      */
     public static int[] sortColors(int[] colors) {
         int temp;
