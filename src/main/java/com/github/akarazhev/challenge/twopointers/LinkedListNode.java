@@ -1,7 +1,7 @@
 package com.github.akarazhev.challenge.twopointers;
 
 /**
- * Template for linked list node class
+ * Template for linked list node class.
  */
 public class LinkedListNode {
     public int data;
