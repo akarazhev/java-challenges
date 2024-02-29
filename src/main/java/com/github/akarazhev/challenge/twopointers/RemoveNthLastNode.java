@@ -8,9 +8,9 @@ public class RemoveNthLastNode {
     /**
      * This function takes a head pointer of the list, and n as the position to remove from end of the list.
      *
-     * @param head the begging og the list
-     * @param n    the position
-     * @return the final list
+     * @param head the begging og the list.
+     * @param n    the position.
+     * @return the final list.
      */
     public static LinkedListNode removeNthLastNode(LinkedListNode head, int n) {
         LinkedListNode right = head;
