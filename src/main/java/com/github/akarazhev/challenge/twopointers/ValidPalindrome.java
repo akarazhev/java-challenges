@@ -8,7 +8,7 @@ public class ValidPalindrome {
     /**
      * This function takes a string, s, as an input and determines whether or not it is a palindrome.
      *
-     * @param s the string
+     * @param s the string.
      * @return the result of operation.
      */
     public static boolean isPalindrome(String s) {
