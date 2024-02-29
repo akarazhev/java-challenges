@@ -1,6 +1,6 @@
 # Introduction
 
-Similar to the two pointers pattern, the fast and slow pointers pattern uses two pointers to traverse an iterable data 
+Similar to the two pointers pattern, the **fast and slow pointers** pattern uses two pointers to traverse an iterable data 
 structure at different speeds. It’s usually used to identify distinguishable features of directional data structures, 
 such as a linked list or an array.
 
