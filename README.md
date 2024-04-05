@@ -34,8 +34,6 @@ related patterns to solve a diverse range of problems.
 
 ## Interview
 
-// TODO:
-
 ### Arrays and Strings
 
 - [Is Unique](doc/interview/arraysandstrings/is_unique.md "Is Unique Task")
