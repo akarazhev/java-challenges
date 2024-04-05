@@ -6,7 +6,7 @@ package com.github.akarazhev.challenge.fastandslowpointers;
 public class HappyNumber {
 
     /**
-     * This function takes a number and evaluates if it's the happy number of not.
+     * This function takes a number and evaluates if it's the happy number or not.
      *
      * @param n the number.
      * @return the result of operation.

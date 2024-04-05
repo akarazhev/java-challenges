@@ -2,17 +2,7 @@
 
 ## Statement
 
-### Constraints:
-
-## Examples
-
-Input:
-
-
-
-Output:
-
-
+### Constraints
 
 ## Solution
 
@@ -23,7 +13,4 @@ Tests are here: [.java](../../src/test/java/com/github/akarazhev/challenge/twopo
 
 ### Time complexity
 
-
-
 ### Space complexity
-

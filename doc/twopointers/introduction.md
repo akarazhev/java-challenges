@@ -10,10 +10,10 @@ For example, to identify whether a string is a palindrome, we can use one pointe
 beginning and the other to iterate it from the end. At each step, we can compare the values of the two pointers and 
 see if they meet the palindrome properties.
 
-The naive approach to solving this problem would be using nested loops, with a time complexity of _O_(_n_^2). 
+The naive approach to solving this problem would be using nested loops, with a time complexity of O(n^2). 
 However, by using two pointers moving towards the middle from either end, we exploit the symmetry property of 
 palindromic strings. This allows us to compare the elements in a single loop, making the algorithm more efficient 
-with a time complexity of _O_(_n_).
+with a time complexity of O(n).
 
 <hr>
 

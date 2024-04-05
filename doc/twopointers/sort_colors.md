@@ -12,24 +12,10 @@ and blue. The function should return the same array.
 
 > Note: The function should only return the modified **colors** array.
 
-### Constraints:
+### Constraints
 
 - 1 ≤ **colors.length** ≤ 300
 - **colors[i]** can only contain 0s, 1s, or 2s.
-
-## Examples
-
-**Input**: 1, 0, 2, 1, 2, 2 
-
-**Output**: 0, 1, 1, 2, 2, 2
-
-**Input**: 0, 1, 1, 2, 0, 2, 0, 2, 1, 2
-
-**Output**: 0, 0, 0, 1, 1, 1, 2, 2, 2, 2
-
-**Input**: 0
-
-**Output**: 0
 
 ## Solution
 
@@ -40,11 +26,11 @@ Tests are here: [SortColorsTest.java](../../src/test/java/com/github/akarazhev/c
 
 ### Time complexity
 
-The time complexity of this solution is _O_(_n_), since we’re only traversing the array once.
+The time complexity of this solution is O(n), since we’re only traversing the array once.
 
 ### Space complexity
 
-The space complexity of this solution is _O_(1), since no extra space is used.
+The space complexity of this solution is O(1), since no extra space is used.
 
 <hr>
 
