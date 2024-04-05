@@ -31,3 +31,11 @@ related patterns to solve a diverse range of problems.
 ### Modified Binary Search
 
 ### Conclusion
+
+## Interview
+
+// TODO:
+
+### Arrays and Strings
+
+- [Is Unique](doc/interview/arraysandstrings/is_unique.md "Is Unique Task")
