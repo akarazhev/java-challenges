@@ -23,7 +23,7 @@ public class IsUniqueTest {
     }
 
     @Test
-    @DisplayName("Test First Solution Is String Unique")
+    @DisplayName("Test Second Solution Is String Unique")
     void testSecondSolutionIsStringUnique() {
         assertTrue(IsUnique.SecondSolution.isUniqueChars("abcde"));
         assertFalse(IsUnique.SecondSolution.isUniqueChars("hello"));
