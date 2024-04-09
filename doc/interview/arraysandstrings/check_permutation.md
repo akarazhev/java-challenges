@@ -21,16 +21,6 @@ Tests are here:
 [CheckPermutationTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/CheckPermutationTest.java 
 "CheckPermutationTest.java").
 
-## Complexity
-
-### Time complexity
-
-.
-
-### Space complexity
-
-.
-
 <hr>
 
 Go to [README](../../../README.md "README.me")
