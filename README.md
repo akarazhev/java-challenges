@@ -37,3 +37,10 @@ related patterns to solve a diverse range of problems.
 ### Arrays and Strings
 
 - [Is Unique](doc/interview/arraysandstrings/is_unique.md "Is Unique Task")
+- [Check Permutation](doc/interview/arraysandstrings/check_permutation.md "Check Permutation Task")
+- [URLify](doc/interview/arraysandstrings/urlify.md "URLify Task")
+- [Palindrome Permutation](doc/interview/arraysandstrings/palindrome_permutation.md "Palindrome Permutation Task")
+- [One Away](doc/interview/arraysandstrings/one_away.md "One Away Task")
+- [String Compression](doc/interview/arraysandstrings/string_compression.md "String Compression Task")
+- [Rotate Matrix:](doc/interview/arraysandstrings/rotate_matrix.md "Rotate Matrix Task")
+- [Zero Matrix](doc/interview/arraysandstrings/zero_matrix.md "Zero Matrix Task")
