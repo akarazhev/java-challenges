@@ -1,9 +1,9 @@
 package com.github.akarazhev.challenge.interview.arraysandstrings;
 
 /**
- * Provides <code>Unique String</code> solution.
+ * Provides <code>Is Unique</code> solutions.
  */
-public class UniqueString {
+public class IsUnique {
 
     /**
      * This function takes a string and evaluates if it's the unique or not.

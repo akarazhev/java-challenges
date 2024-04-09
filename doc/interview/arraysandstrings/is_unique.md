@@ -17,11 +17,9 @@ What if you cannot use additional data structures?
 ### Solution
 
 Solutions are here: 
-[UniqueString.java](../../../src/main/java/com/github/akarazhev/challenge/interview/arraysandstrings/UniqueString.java 
-"UniqueString.java").
+[IsUnique.java](../../../src/main/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUnique.java "IsUnique.java").
 Tests are here: 
-[UniqueStringTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/UniqueStringTest.java 
-"UniqueStringTest.java").
+[IsUniqueTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUniqueTest.java "IsUniqueTest.java").
 
 ## Complexity
 
