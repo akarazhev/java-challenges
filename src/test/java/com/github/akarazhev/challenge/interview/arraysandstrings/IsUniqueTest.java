@@ -13,22 +13,22 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class IsUniqueTest {
 
     @Test
-    @DisplayName("Test Is String Unique")
-    void testIsStringUnique() {
-        assertTrue(IsUnique.isUnique("abcde"));
-        assertFalse(IsUnique.isUnique("hello"));
-        assertFalse(IsUnique.isUnique("apple"));
-        assertTrue(IsUnique.isUnique("kite"));
-        assertTrue(IsUnique.isUnique("padle"));
+    @DisplayName("Test First Solution Is String Unique")
+    void testFirstSolutionIsStringUnique() {
+        assertTrue(IsUnique.FirstSolution.isUniqueChars("abcde"));
+        assertFalse(IsUnique.FirstSolution.isUniqueChars("hello"));
+        assertFalse(IsUnique.FirstSolution.isUniqueChars("apple"));
+        assertTrue(IsUnique.FirstSolution.isUniqueChars("kite"));
+        assertTrue(IsUnique.FirstSolution.isUniqueChars("padle"));
     }
 
     @Test
-    @DisplayName("Test Is String Unique Chars")
-    void testIsStringUniqueChars() {
-        assertTrue(IsUnique.isUniqueChars("abcde"));
-        assertFalse(IsUnique.isUniqueChars("hello"));
-        assertFalse(IsUnique.isUniqueChars("apple"));
-        assertTrue(IsUnique.isUniqueChars("kite"));
-        assertTrue(IsUnique.isUniqueChars("padle"));
+    @DisplayName("Test First Solution Is String Unique")
+    void testSecondSolutionIsStringUnique() {
+        assertTrue(IsUnique.SecondSolution.isUniqueChars("abcde"));
+        assertFalse(IsUnique.SecondSolution.isUniqueChars("hello"));
+        assertFalse(IsUnique.SecondSolution.isUniqueChars("apple"));
+        assertTrue(IsUnique.SecondSolution.isUniqueChars("kite"));
+        assertTrue(IsUnique.SecondSolution.isUniqueChars("padle"));
     }
 }

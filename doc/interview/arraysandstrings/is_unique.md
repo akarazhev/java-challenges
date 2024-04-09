@@ -2,11 +2,7 @@
 
 ## Statement
 
-Implement an algorithm to determine if a string has all unique characters.
-
-### Constraints
-
-What if you cannot use additional data structures?
+Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
 ### Hints
 
@@ -17,9 +13,11 @@ What if you cannot use additional data structures?
 ### Solution
 
 Solutions are here: 
-[IsUnique.java](../../../src/main/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUnique.java "IsUnique.java").
+[IsUnique.java](../../../src/main/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUnique.java 
+"IsUnique.java").
 Tests are here: 
-[IsUniqueTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUniqueTest.java "IsUniqueTest.java").
+[IsUniqueTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/IsUniqueTest.java 
+"IsUniqueTest.java").
 
 ## Complexity
 
