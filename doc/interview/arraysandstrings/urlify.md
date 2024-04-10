@@ -18,16 +18,6 @@ Solutions are here:
 Tests are here:
 [URLifyTest.java](../../../src/test/java/com/github/akarazhev/challenge/interview/arraysandstrings/URLifyTest.java "URLifyTest.java").
 
-## Complexity
-
-### Time complexity
-
-.
-
-### Space complexity
-
-.
-
 <hr>
 
 Go to [README](../../../README.md "README.me")
