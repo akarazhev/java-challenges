@@ -21,14 +21,14 @@ public class IsUnique {
                 return false;
             }
 
-            boolean[] chars = new boolean[128];
+            boolean[] charSet = new boolean[128];
             for (int i = 0; i < s.length(); i++) {
-                byte c = (byte) s.charAt(i);
-                if (chars[c]) {
+                int val = s.charAt(i);
+                if (charSet[val]) {
                     return false;
                 }
 
-                chars[c] = true;
+                charSet[val] = true;
             }
 
             return true;
