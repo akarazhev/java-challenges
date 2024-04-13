@@ -42,5 +42,6 @@ related patterns to solve a diverse range of problems.
 - [Palindrome Permutation](doc/interview/arraysandstrings/palindrome_permutation.md "Palindrome Permutation Task")
 - [One Away](doc/interview/arraysandstrings/one_away.md "One Away Task")
 - [String Compression](doc/interview/arraysandstrings/string_compression.md "String Compression Task")
-- [Rotate Matrix:](doc/interview/arraysandstrings/rotate_matrix.md "Rotate Matrix Task")
+- [Rotate Matrix](doc/interview/arraysandstrings/rotate_matrix.md "Rotate Matrix Task")
 - [Zero Matrix](doc/interview/arraysandstrings/zero_matrix.md "Zero Matrix Task")
+- [String Rotation](doc/interview/arraysandstrings/string_rotation.md "String Rotation Task")
