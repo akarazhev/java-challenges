@@ -39,6 +39,7 @@ public class IsUnique {
      * Second solution
      */
     static class SecondSolution {
+
         /**
          * This function takes a string and evaluates if it's the unique or not.
          *
