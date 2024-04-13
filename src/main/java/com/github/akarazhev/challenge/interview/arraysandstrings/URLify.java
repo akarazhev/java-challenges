@@ -12,10 +12,10 @@ public class URLify {
      * @param trueLength the true length
      */
     public static void replaceSpaces(char[] s, int trueLength) {
-        int spaces = 0, i;
+        int spaceCount = 0, i;
         for (i = 0; i < trueLength; i++) {
             if (s[i] == ' ') {
-                spaces++;
+                spaceCount++;
             }
         }
 
@@ -23,7 +23,7 @@ public class URLify {
             s[trueLength] = '\0';
         }
 
-        int index = trueLength + spaces * 2;
+        int index = trueLength + spaceCount * 2;
         for (i = trueLength - 1; i >= 0; i--) {
             if (s[i] == ' ') {
                 s[index - 1] = '0';
