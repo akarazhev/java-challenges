@@ -41,25 +41,23 @@ public class CheckPermutation {
          * @return the result of operation
          */
         public static boolean permutation(String s, String t) {
-            if (s.length() != t.length()) { // Permutations must be same length
-                return false;
+            if (s.length() != t.length()) {
+                return false; // Permutations must be same length
             }
 
             int[] letters = new int[128]; // Assumption: ASCII
-            char[] string = s.toCharArray();
-            for (char c : string) { // count number of each char in s
-                letters[c]++;
+            for (int i = 0; i < s.length(); i++) {
+                letters[s.charAt(i)]++;
             }
 
             for (int i = 0; i < t.length(); i++) {
-                int c = t.charAt(i);
-                letters[c]--;
-                if (letters[c] < 0) {
+                letters[t.charAt(i)]--;
+                if (letters[t.charAt(i)] < 0) {
                     return false;
                 }
             }
 
-            return true;
+            return true; // letters array has no negative values, and therefore no positive values either
         }
     }
 }
