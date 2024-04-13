@@ -46,7 +46,7 @@ public class IsUnique {
          * @return the result of operation
          */
         public static boolean isUniqueChars(String s) {
-            if (s.length() > 26) {
+            if (s.length() > 26) { // Only 26 characters
                 return false;
             }
 
