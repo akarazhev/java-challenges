@@ -8,23 +8,23 @@ public class URLify {
     /**
      * This function replace all spaces in a string with '%20'.
      *
-     * @param s          the string
-     * @param trueLength the true length
+     * @param s the string
+     * @param l the true length
      */
-    public static void replaceSpaces(char[] s, int trueLength) {
+    public static void replaceSpaces(char[] s, int l) {
         int spaceCount = 0, i;
-        for (i = 0; i < trueLength; i++) {
+        for (i = 0; i < l; i++) {
             if (s[i] == ' ') {
                 spaceCount++;
             }
         }
 
-        if (trueLength < s.length) {
-            s[trueLength] = '\0';
+        if (l < s.length) {
+            s[l] = '\0';
         }
 
-        int index = trueLength + spaceCount * 2;
-        for (i = trueLength - 1; i >= 0; i--) {
+        int index = l + spaceCount * 2;
+        for (i = l - 1; i >= 0; i--) {
             if (s[i] == ' ') {
                 s[index - 1] = '0';
                 s[index - 2] = '2';

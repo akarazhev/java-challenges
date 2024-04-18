@@ -48,17 +48,17 @@ public class OneAway {
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
          *
-         * @param first the first string
-         * @param second the second string
+         * @param f the first string
+         * @param s the second string
          * @return the result of operation
          */
-        public static boolean oneEditAway(String first, String second) {
-            if (first.length() == second.length()) {
-                return oneEditReplace(first, second);
-            } else if (first.length() + 1 == second.length()) {
-                return oneEditInsert(first, second);
-            } else if (first.length() - 1 == second.length()) {
-                return oneEditInsert(second, first);
+        public static boolean oneEditAway(String f, String s) {
+            if (f.length() == s.length()) {
+                return oneEditReplace(f, s);
+            } else if (f.length() + 1 == s.length()) {
+                return oneEditInsert(f, s);
+            } else if (f.length() - 1 == s.length()) {
+                return oneEditInsert(s, f);
             }
 
             return false;
@@ -73,19 +73,19 @@ public class OneAway {
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
          *
-         * @param first  the first string
-         * @param second the second string
+         * @param f the first string
+         * @param s the second string
          * @return the result of operation
          */
-        public static boolean oneEditAway(String first, String second) {
+        public static boolean oneEditAway(String f, String s) {
             /* Length checks. */
-            if (Math.abs(first.length() - second.length()) > 1) {
+            if (Math.abs(f.length() - s.length()) > 1) {
                 return false;
             }
 
             /* Get shorter and longer string.*/
-            String s1 = first.length() < second.length() ? first : second;
-            String s2 = first.length() < second.length() ? second : first;
+            String s1 = f.length() < s.length() ? f : s;
+            String s2 = f.length() < s.length() ? s : f;
 
             int index1 = 0;
             int index2 = 0;
