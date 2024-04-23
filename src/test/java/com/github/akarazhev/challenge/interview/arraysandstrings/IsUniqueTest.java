@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Provides tests for the <code>Is Unique</code> solutions.
+ * Provides tests for the statement:
+ * Implement an algorithm to determine if a string has all unique characters.
+ * What if you cannot use additional data structures?
  */
 @DisplayName("Unique String Test")
 public class IsUniqueTest {

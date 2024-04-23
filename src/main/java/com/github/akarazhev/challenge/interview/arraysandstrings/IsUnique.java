@@ -1,29 +1,25 @@
 package com.github.akarazhev.challenge.interview.arraysandstrings;
 
 /**
- * Provides <code>Is Unique</code> solutions.
+ * Statement: Implement an algorithm to determine if a string has all unique characters.
+ * What if you cannot use additional data structures?
  */
 public class IsUnique {
 
     /**
-     * First solution
+     * First solution: The function takes a string and evaluates if it's the unique or not.
      */
     static class FirstSolution {
 
-        /**
-         * This function takes a string and evaluates if it's the unique or not.
-         *
-         * @param s the string
-         * @return the result of operation
-         */
-        public static boolean isUniqueChars(String s) {
-            if (s.length() > 128) {
+        public static boolean isUniqueChars(String string) {
+            if (string.length() > 128) {
                 return false;
             }
 
+            int val;
             boolean[] charSet = new boolean[128];
-            for (int i = 0; i < s.length(); i++) {
-                int val = s.charAt(i);
+            for (int i = 0; i < string.length(); i++) {
+                val = string.charAt(i);
                 if (charSet[val]) {
                     return false;
                 }
@@ -36,24 +32,22 @@ public class IsUnique {
     }
 
     /**
-     * Second solution
+     * Second solution: The function takes a string and evaluates if it's the unique or not.
      */
     static class SecondSolution {
 
         /**
-         * This function takes a string and evaluates if it's the unique or not.
-         *
-         * @param s the string
-         * @return the result of operation
+         * Assumes only letters a through z.
          */
-        public static boolean isUniqueChars(String s) {
-            if (s.length() > 26) { // Only 26 characters
+        public static boolean isUniqueChars(String string) {
+            if (string.length() > 26) { // Only 26 characters
                 return false;
             }
 
+            int val;
             int checker = 0;
-            for (int i = 0; i < s.length(); i++) {
-                int val = s.charAt(i) - 'a';
+            for (int i = 0; i < string.length(); i++) {
+                val = string.charAt(i) - 'a';
                 if ((checker & (1 << val)) > 0) {
                     return false;
                 }
