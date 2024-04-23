@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?
  */
-@DisplayName("Unique String Test")
+@DisplayName("Is Unique String Test")
 public class IsUniqueTest {
 
     @Test
-    @DisplayName("Test First Solution Is String Unique")
-    void testFirstSolutionIsStringUnique() {
+    @DisplayName("Test First Solution")
+    void testFirstSolution() {
         assertTrue(IsUnique.FirstSolution.isUniqueChars("abcde"));
         assertFalse(IsUnique.FirstSolution.isUniqueChars("hello"));
         assertFalse(IsUnique.FirstSolution.isUniqueChars("apple"));
@@ -25,8 +25,8 @@ public class IsUniqueTest {
     }
 
     @Test
-    @DisplayName("Test Second Solution Is String Unique")
-    void testSecondSolutionIsStringUnique() {
+    @DisplayName("Test Second Solution")
+    void testSecondSolution() {
         assertTrue(IsUnique.SecondSolution.isUniqueChars("abcde"));
         assertFalse(IsUnique.SecondSolution.isUniqueChars("hello"));
         assertFalse(IsUnique.SecondSolution.isUniqueChars("apple"));
