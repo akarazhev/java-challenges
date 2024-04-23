@@ -1,7 +1,10 @@
 package com.github.akarazhev.challenge.interview.arraysandstrings;
 
 /**
- * Provides <code>String Compression</code> solutions.
+ * Statement: Implement a method to perform basic string compression using the counts of repeated characters.
+ * For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than
+ * the original string, your method should return the original string. You can assume the string has only uppercase and
+ * lowercase letters (a - z).
  */
 public class StringCompression {
 
@@ -12,24 +15,21 @@ public class StringCompression {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
-         *
-         * @param s the string
-         * @return the result of operation
          */
-        public static String compress(String s) {
+        public static String compress(String string) {
             String compressedString = "";
             int countConsecutive = 0;
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < string.length(); i++) {
                 countConsecutive++;
 
-                /* If next character is different than current, append this char to result.*/
-                if (i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
-                    compressedString += "" + s.charAt(i) + countConsecutive;
+                /* If next character is different from current, append this char to result.*/
+                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
+                    compressedString += "" + string.charAt(i) + countConsecutive;
                     countConsecutive = 0;
                 }
             }
 
-            return compressedString.length() < s.length() ? compressedString : s;
+            return compressedString.length() < string.length() ? compressedString : string;
         }
     }
 
@@ -40,25 +40,22 @@ public class StringCompression {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
-         *
-         * @param s the string
-         * @return the result of operation
          */
-        public static String compress(String s) {
+        public static String compress(String string) {
             StringBuilder compressed = new StringBuilder();
             int countConsecutive = 0;
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < string.length(); i++) {
                 countConsecutive++;
 
-                /* If next character is different than current, append this char to result.*/
-                if (i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
-                    compressed.append(s.charAt(i));
+                /* If next character is different from current, append this char to result.*/
+                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
+                    compressed.append(string.charAt(i));
                     compressed.append(countConsecutive);
                     countConsecutive = 0;
                 }
             }
 
-            return compressed.length() < s.length() ? compressed.toString() : s;
+            return compressed.length() < string.length() ? compressed.toString() : string;
         }
     }
 
@@ -69,24 +66,21 @@ public class StringCompression {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
-         *
-         * @param s the string
-         * @return the result of operation
          */
-        public static String compress(String s) {
-            int finalLength = countCompression(s);
-            if (finalLength >= s.length()) {
-                return s;
+        public static String compress(String string) {
+            int finalLength = countCompression(string);
+            if (finalLength >= string.length()) {
+                return string;
             }
 
             StringBuilder compressed = new StringBuilder(finalLength); // initialize capacity
             int countConsecutive = 0;
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < string.length(); i++) {
                 countConsecutive++;
 
-                /* If next character is different than current, append this char to result.*/
-                if (i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
-                    compressed.append(s.charAt(i));
+                /* If next character is different from current, append this char to result.*/
+                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
+                    compressed.append(string.charAt(i));
                     compressed.append(countConsecutive);
                     countConsecutive = 0;
                 }
@@ -95,14 +89,14 @@ public class StringCompression {
             return compressed.toString();
         }
 
-        private static int countCompression(String s) {
+        private static int countCompression(String string) {
             int compressedLength = 0;
             int countConsecutive = 0;
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < string.length(); i++) {
                 countConsecutive++;
 
-                /* If next character is different than current, append this char to result.*/
-                if (i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
+                /* If next character is different from current, append this char to result.*/
+                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
                     compressedLength += 1 + String.valueOf(countConsecutive).length();
                     countConsecutive = 0;
                 }
