@@ -1,7 +1,14 @@
 package com.github.akarazhev.challenge.interview.arraysandstrings;
 
 /**
- * Provides <code>One Away</code> solutions.
+ * Statement: There are three types of edits that can be performed on strings: insert a character, remove a character,
+ * or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
+ * <p>
+ * EXAMPLE
+ * pale,  ple  -> true
+ * pales, pale -> true
+ * pale,  bale -> true
+ * pale,  bake -> false
  */
 public class OneAway {
 
@@ -10,10 +17,10 @@ public class OneAway {
      */
     static class FirstSolution {
 
-        private static boolean oneEditReplace(String s1, String s2) {
+        private static boolean oneEditReplace(String firstString, String secondString) {
             boolean foundDifference = false;
-            for (int i = 0; i < s1.length(); i++) {
-                if (s1.charAt(i) != s2.charAt(i)) {
+            for (int i = 0; i < firstString.length(); i++) {
+                if (firstString.charAt(i) != secondString.charAt(i)) {
                     if (foundDifference) {
                         return false;
                     }
@@ -25,20 +32,22 @@ public class OneAway {
             return true;
         }
 
-        /* Check if you can insert a character into s1 to make s2. */
-        private static boolean oneEditInsert(String s1, String s2) {
-            int index1 = 0;
-            int index2 = 0;
-            while (index2 < s2.length() && index1 < s1.length()) {
-                if (s1.charAt(index1) != s2.charAt(index2)) {
-                    if (index1 != index2) {
+        /**
+         * Check if you can insert a character into firstString to make secondString.
+         */
+        private static boolean oneEditInsert(String firstString, String secondString) {
+            int firstIndex = 0;
+            int secondIndex = 0;
+            while (secondIndex < secondString.length() && firstIndex < firstString.length()) {
+                if (firstString.charAt(firstIndex) != secondString.charAt(secondIndex)) {
+                    if (firstIndex != secondIndex) {
                         return false;
                     }
 
-                    index2++;
+                    secondIndex++;
                 } else {
-                    index1++;
-                    index2++;
+                    firstIndex++;
+                    secondIndex++;
                 }
             }
 
@@ -47,18 +56,14 @@ public class OneAway {
 
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
-         *
-         * @param f the first string
-         * @param s the second string
-         * @return the result of operation
          */
-        public static boolean oneEditAway(String f, String s) {
-            if (f.length() == s.length()) {
-                return oneEditReplace(f, s);
-            } else if (f.length() + 1 == s.length()) {
-                return oneEditInsert(f, s);
-            } else if (f.length() - 1 == s.length()) {
-                return oneEditInsert(s, f);
+        public static boolean oneEditAway(String firstString, String secondString) {
+            if (firstString.length() == secondString.length()) {
+                return oneEditReplace(firstString, secondString);
+            } else if (firstString.length() + 1 == secondString.length()) {
+                return oneEditInsert(firstString, secondString);
+            } else if (firstString.length() - 1 == secondString.length()) {
+                return oneEditInsert(secondString, firstString);
             }
 
             return false;
@@ -72,40 +77,36 @@ public class OneAway {
 
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
-         *
-         * @param f the first string
-         * @param s the second string
-         * @return the result of operation
          */
-        public static boolean oneEditAway(String f, String s) {
+        public static boolean oneEditAway(String firstString, String secondString) {
             /* Length checks. */
-            if (Math.abs(f.length() - s.length()) > 1) {
+            if (Math.abs(firstString.length() - secondString.length()) > 1) {
                 return false;
             }
 
             /* Get shorter and longer string.*/
-            String s1 = f.length() < s.length() ? f : s;
-            String s2 = f.length() < s.length() ? s : f;
+            String shorterString = firstString.length() < secondString.length() ? firstString : secondString;
+            String longerString = firstString.length() < secondString.length() ? secondString : firstString;
 
-            int index1 = 0;
-            int index2 = 0;
+            int firstIndex = 0;
+            int secondIndex = 0;
             boolean foundDifference = false;
-            while (index2 < s2.length() && index1 < s1.length()) {
-                if (s1.charAt(index1) != s2.charAt(index2)) {
+            while (secondIndex < longerString.length() && firstIndex < shorterString.length()) {
+                if (shorterString.charAt(firstIndex) != longerString.charAt(secondIndex)) {
                     /* Ensure that this is the first difference found.*/
                     if (foundDifference) {
                         return false;
                     }
 
                     foundDifference = true;
-                    if (s1.length() == s2.length()) { // On replace, move shorter pointer
-                        index1++;
+                    if (shorterString.length() == longerString.length()) { // On replace, move shorter pointer
+                        firstIndex++;
                     }
                 } else {
-                    index1++; // If matching, move shorter pointer
+                    firstIndex++; // If matching, move shorter pointer
                 }
 
-                index2++; // Always move pointer for longer string
+                secondIndex++; // Always move pointer for longer string
             }
 
             return true;

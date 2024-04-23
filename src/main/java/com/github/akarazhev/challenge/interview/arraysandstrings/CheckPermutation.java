@@ -6,7 +6,7 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
 public class CheckPermutation {
 
     /**
-     * First Solution: The function takes two strings and evaluates if one is a permutation of the other.
+     * First Solution
      */
     static class FirstSolution {
 
@@ -16,16 +16,22 @@ public class CheckPermutation {
             return new String(content);
         }
 
+        /**
+         * This function takes two strings and evaluates if one is a permutation of the other.
+         */
         public static boolean permutation(String firstString, String secondString) {
             return sort(firstString).equals(sort(secondString));
         }
     }
 
     /**
-     * Second Solution: The function takes two strings and evaluates if one is a permutation of the other.
+     * Second Solution
      */
     static class SecondSolution {
 
+        /**
+         * This function takes two strings and evaluates if one is a permutation of the other.
+         */
         public static boolean permutation(String firstString, String secondString) {
             if (firstString.length() != secondString.length()) {
                 return false; // Permutations must be same length

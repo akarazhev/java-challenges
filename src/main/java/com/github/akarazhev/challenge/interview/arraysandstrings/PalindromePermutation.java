@@ -40,7 +40,7 @@ public class PalindromePermutation {
     }
 
     /**
-     * First solution: The function takes a string and check if it is a permutation of a palindrome.
+     * First solution
      */
     static class FirstSolution {
 
@@ -59,6 +59,9 @@ public class PalindromePermutation {
             return true;
         }
 
+        /**
+         * This function takes a string and check if it is a permutation of a palindrome.
+         */
         public static boolean isPermutation(String phrase) {
             int[] table = Common.buildCharFrequencyTable(phrase);
             return checkMaxOneOdd(table);
@@ -66,10 +69,13 @@ public class PalindromePermutation {
     }
 
     /**
-     * Second solution: The function takes a string and check if it is a permutation of a palindrome.
+     * Second solution
      */
     static class SecondSolution {
 
+        /**
+         * This function takes a string and check if it is a permutation of a palindrome.
+         */
         public static boolean isPermutation(String phrase) {
             int countOdd = 0, x;
             int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
@@ -91,7 +97,7 @@ public class PalindromePermutation {
     }
 
     /**
-     * Third solution: The function takes a string and check if it is a permutation of a palindrome.
+     * Third solution
      */
     static class ThirdSolution {
 
@@ -133,6 +139,9 @@ public class PalindromePermutation {
             return (bitVector & (bitVector - 1)) == 0;
         }
 
+        /**
+         * This function takes a string and check if it is a permutation of a palindrome.
+         */
         public static boolean isPermutation(String phrase) {
             int bitVector = createBitVector(phrase);
             return checkAtMostOneBitSet(bitVector);

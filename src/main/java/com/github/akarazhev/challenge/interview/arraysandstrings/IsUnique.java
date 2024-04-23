@@ -7,10 +7,13 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
 public class IsUnique {
 
     /**
-     * First solution: The function takes a string and evaluates if it's the unique or not.
+     * First solution
      */
     static class FirstSolution {
 
+        /**
+         * This function takes a string and evaluates if it's the unique or not.
+         */
         public static boolean isUniqueChars(String string) {
             if (string.length() > 128) {
                 return false;
@@ -32,12 +35,12 @@ public class IsUnique {
     }
 
     /**
-     * Second solution: The function takes a string and evaluates if it's the unique or not.
+     * Second solution
      */
     static class SecondSolution {
 
         /**
-         * Assumes only letters a through z.
+         * This function takes a string and evaluates if it's the unique or not. Assumes only letters a through z.
          */
         public static boolean isUniqueChars(String string) {
             if (string.length() > 26) { // Only 26 characters
