@@ -12,8 +12,7 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
 public class URLify {
 
     /**
-     * The function replaces all spaces in a string with '%20'.
-     * Assume string has sufficient free space at the end.
+     * The function replaces all spaces in a string with '%20'. Assume string has sufficient free space at the end.
      */
     public static void replaceSpaces(char[] string, int trueLength) {
         int spaceCount = 0, i;

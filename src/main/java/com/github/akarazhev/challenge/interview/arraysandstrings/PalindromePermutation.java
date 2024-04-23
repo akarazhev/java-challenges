@@ -1,17 +1,23 @@
 package com.github.akarazhev.challenge.interview.arraysandstrings;
 
 /**
- * Provides <code>Palindrome Permutation</code> solutions.
+ * Statement: Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word
+ * or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome
+ * does not need to be limited to just dictionary words.
+ * <p>
+ * EXAMPLE
+ * Input: Tact Coa
+ * Output: True (permutations: "taco cat", "atco eta", etc.)
  */
 public class PalindromePermutation {
 
     private static class Common {
 
-        private static int getCharNumber(Character c) {
+        private static int getCharNumber(Character character) {
             int a = Character.getNumericValue('a');
             int z = Character.getNumericValue('z');
 
-            int val = Character.getNumericValue(c);
+            int val = Character.getNumericValue(character);
             if (a <= val && val <= z) {
                 return val - a;
             }
@@ -19,10 +25,11 @@ public class PalindromePermutation {
             return -1;
         }
 
-        private static int[] buildCharFrequencyTable(String p) {
+        private static int[] buildCharFrequencyTable(String phrase) {
+            int x;
             int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
-            for (char c : p.toCharArray()) {
-                int x = getCharNumber(c);
+            for (char c : phrase.toCharArray()) {
+                x = getCharNumber(c);
                 if (x != -1) {
                     table[x]++;
                 }
@@ -33,13 +40,13 @@ public class PalindromePermutation {
     }
 
     /**
-     * First solution
+     * First solution: The function takes a string and check if it is a permutation of a palindrome.
      */
     static class FirstSolution {
 
-        private static boolean checkMaxOneOdd(int[] t) {
+        private static boolean checkMaxOneOdd(int[] table) {
             boolean foundOdd = false;
-            for (int count : t) {
+            for (int count : table) {
                 if (count % 2 == 1) {
                     if (foundOdd) {
                         return false;
@@ -48,36 +55,25 @@ public class PalindromePermutation {
                     foundOdd = true;
                 }
             }
+
             return true;
         }
 
-        /**
-         * This function takes a string and check if it is a permutation of a palindrome.
-         *
-         * @param p the phrase
-         * @return the result of operation
-         */
-        public static boolean isPermutation(String p) {
-            int[] table = Common.buildCharFrequencyTable(p);
+        public static boolean isPermutation(String phrase) {
+            int[] table = Common.buildCharFrequencyTable(phrase);
             return checkMaxOneOdd(table);
         }
     }
 
     /**
-     * Second solution
+     * Second solution: The function takes a string and check if it is a permutation of a palindrome.
      */
     static class SecondSolution {
 
-        /**
-         * This function takes a string and check if it is a permutation of a palindrome.
-         *
-         * @param p the phrase
-         * @return the result of operation
-         */
-        public static boolean isPermutation(String p) {
+        public static boolean isPermutation(String phrase) {
             int countOdd = 0, x;
             int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
-            for (char c : p.toCharArray()) {
+            for (char c : phrase.toCharArray()) {
                 x = Common.getCharNumber(c);
                 if (x != -1) {
                     table[x]++;
@@ -94,51 +90,52 @@ public class PalindromePermutation {
         }
     }
 
+    /**
+     * Third solution: The function takes a string and check if it is a permutation of a palindrome.
+     */
     static class ThirdSolution {
 
-        /* Toggle the ith bit in the integer. */
-        private static int toggle(int v, int i) {
-            if (i < 0) {
-                return v;
+        /**
+         * Toggle the ith bit in the integer.
+         */
+        private static int toggle(int bitVector, int index) {
+            if (index < 0) {
+                return bitVector;
             }
 
-            int mask = 1 << i;
-            if ((v & mask) == 0) {
-                v |= mask;
+            int mask = 1 << index;
+            if ((bitVector & mask) == 0) {
+                bitVector |= mask;
             } else {
-                v &= ~mask;
+                bitVector &= ~mask;
             }
 
-            return v;
-        }
-
-        /* Create bit vector for string. For each letter with value i,
-         * toggle the ith bit. */
-        private static int createBitVector(String p) {
-            int v = 0;
-            for (char c : p.toCharArray()) {
-                int x = Common.getCharNumber(c);
-                v = toggle(v, x);
-            }
-
-            return v;
-        }
-
-        /* Check that at most one bit is set by subtracting one from the
-         * integer and ANDing it with the original integer. */
-        private static boolean checkAtMostOneBitSet(int v) {
-            return (v & (v - 1)) == 0;
+            return bitVector;
         }
 
         /**
-         * This function takes a string and check if it is a permutation of a palindrome.
-         *
-         * @param p the phrase
-         * @return the result of operation
+         * Create bit vector for string. For each letter with value i, toggle the ith bit.
          */
-        public static boolean isPermutation(String p) {
-            int v = createBitVector(p);
-            return checkAtMostOneBitSet(v);
+        private static int createBitVector(String phrase) {
+            int x, bitVector = 0;
+            for (char c : phrase.toCharArray()) {
+                x = Common.getCharNumber(c);
+                bitVector = toggle(bitVector, x);
+            }
+
+            return bitVector;
+        }
+
+        /**
+         * Check that at most one bit is set by subtracting one from the integer and ANDing it with the original integer.
+         */
+        private static boolean checkAtMostOneBitSet(int bitVector) {
+            return (bitVector & (bitVector - 1)) == 0;
+        }
+
+        public static boolean isPermutation(String phrase) {
+            int bitVector = createBitVector(phrase);
+            return checkAtMostOneBitSet(bitVector);
         }
     }
 }
