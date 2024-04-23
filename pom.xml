@@ -4,7 +4,6 @@
 
     <groupId>com.github.akarazhev</groupId>
     <artifactId>java-challenges</artifactId>
-    <packaging>pom</packaging>
     <version>1.0</version>
 
     <name>java-challenges</name>
