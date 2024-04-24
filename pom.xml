@@ -15,9 +15,9 @@
         <maven.compiler.plugin>3.12.1</maven.compiler.plugin>
         <maven.surefire.plugin>3.2.5</maven.surefire.plugin>
         <junit.version>5.10.2</junit.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <maven.compiler.release>22</maven.compiler.release>
     </properties>
 
     <developers>
