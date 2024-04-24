@@ -7,14 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Provides tests for the <code>One Away</code> solutions.
+ * Provides tests for the statement: There are three types of edits that can be performed on strings: insert a character,
+ * remove a character, or replace a character. Given two strings, write a function to check if they are one edit
+ * (or zero edits) away.
  */
-@DisplayName("One Away  Test")
+@DisplayName("One Away String Test")
 public class OneAwayTest {
 
     @Test
-    @DisplayName("Test First Solution One Edit Away")
-    void testFirstSolutionOneEditAway() {
+    @DisplayName("Test First Solution")
+    void testFirstSolution() {
         assertTrue(OneAway.FirstSolution.oneEditAway("a", "b"));
         assertTrue(OneAway.FirstSolution.oneEditAway("", "d"));
         assertTrue(OneAway.FirstSolution.oneEditAway("d", "de"));
@@ -31,8 +33,8 @@ public class OneAwayTest {
     }
 
     @Test
-    @DisplayName("Test Second Solution One Edit Away")
-    void testSecondSolutionOneEditAway() {
+    @DisplayName("Test Second Solution")
+    void testSecondSolution() {
         assertTrue(OneAway.SecondSolution.oneEditAway("a", "b"));
         assertTrue(OneAway.SecondSolution.oneEditAway("", "d"));
         assertTrue(OneAway.SecondSolution.oneEditAway("d", "de"));
