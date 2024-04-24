@@ -30,6 +30,7 @@ public class OneAwayTest {
         assertFalse(OneAway.FirstSolution.oneEditAway("adfdsfadsf", "affdsfads"));
         assertTrue(OneAway.FirstSolution.oneEditAway("pale", "pkle"));
         assertFalse(OneAway.FirstSolution.oneEditAway("pkle", "pable"));
+        assertTrue(OneAway.FirstSolution.oneEditAway("palee", "pale"));
     }
 
     @Test
@@ -48,5 +49,6 @@ public class OneAwayTest {
         assertFalse(OneAway.SecondSolution.oneEditAway("adfdsfadsf", "affdsfads"));
         assertTrue(OneAway.SecondSolution.oneEditAway("pale", "pkle"));
         assertFalse(OneAway.SecondSolution.oneEditAway("pkle", "pable"));
+        assertTrue(OneAway.SecondSolution.oneEditAway("palee", "pale"));
     }
 }
