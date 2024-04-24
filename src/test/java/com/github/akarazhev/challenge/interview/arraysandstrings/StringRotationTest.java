@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Provides tests for the <code>String Rotation</code> solutions.
+ * Provides tests for the statement: Assume you have a method isSubstring which checks if one word is a substring of
+ * another. Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only one call to
+ * isSubstring (e.g.,"waterbottle" is a rotation of"erbottlewat").
  */
 @DisplayName("String Rotation Test")
 public class StringRotationTest {
