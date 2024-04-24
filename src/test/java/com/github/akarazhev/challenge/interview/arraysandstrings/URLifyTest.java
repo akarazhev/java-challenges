@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * the end to hold the additional characters,and that you are given the "true" length of the string.
  * (Note: Please use a character array so that you can perform this operation in place.)
  */
-@DisplayName("URLify Test")
+@DisplayName("URLify String Test")
 public class URLifyTest {
 
     @Test
