@@ -7,14 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Provides tests for the <code>Palindrome Permutation</code> solutions.
+ * Provides tests for the statement: Given a string, write a function to check if it is a permutation of a palindrome.
+ * A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters.
+ * The palindrome does not need to be limited to just dictionary words.
  */
-@DisplayName("Palindrome Permutation Test")
+@DisplayName("Palindrome String Permutation Test")
 public class PalindromePermutationTest {
 
     @Test
-    @DisplayName("Test First Solution Is Permutation")
-    void testFirstSolutionIsPermutation() {
+    @DisplayName("Test First Solution")
+    void testFirstSolution() {
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("Lleve"));
@@ -23,8 +25,8 @@ public class PalindromePermutationTest {
     }
 
     @Test
-    @DisplayName("Test Second Solution Is Permutation")
-    void testSecondSolutionIsPermutation() {
+    @DisplayName("Test Second Solution")
+    void testSecondSolution() {
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("Lleve"));
@@ -33,8 +35,8 @@ public class PalindromePermutationTest {
     }
 
     @Test
-    @DisplayName("Test Third Solution Is Permutation")
-    void testThirdSolutionIsPermutation() {
+    @DisplayName("Test Third Solution")
+    void testThirdSolution() {
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Lleve"));
