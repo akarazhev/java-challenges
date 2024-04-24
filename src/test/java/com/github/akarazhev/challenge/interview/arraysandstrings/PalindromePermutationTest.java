@@ -17,6 +17,8 @@ public class PalindromePermutationTest {
     @Test
     @DisplayName("Test First Solution")
     void testFirstSolution() {
+        assertTrue(PalindromePermutation.FirstSolution.isPermutation("Ratzs live on no evil starz"));
+        assertTrue(PalindromePermutation.FirstSolution.isPermutation("Zeus was deified, saw Suez"));
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.FirstSolution.isPermutation("Lleve"));
@@ -27,6 +29,8 @@ public class PalindromePermutationTest {
     @Test
     @DisplayName("Test Second Solution")
     void testSecondSolution() {
+        assertTrue(PalindromePermutation.SecondSolution.isPermutation("Ratzs live on no evil starz"));
+        assertTrue(PalindromePermutation.SecondSolution.isPermutation("Zeus was deified, saw Suez"));
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.SecondSolution.isPermutation("Lleve"));
@@ -37,6 +41,8 @@ public class PalindromePermutationTest {
     @Test
     @DisplayName("Test Third Solution")
     void testThirdSolution() {
+        assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Ratzs live on no evil starz"));
+        assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Zeus was deified, saw Suez"));
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Rats live on no evil star"));
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("A man, a plan, a canal, panama"));
         assertTrue(PalindromePermutation.ThirdSolution.isPermutation("Lleve"));
