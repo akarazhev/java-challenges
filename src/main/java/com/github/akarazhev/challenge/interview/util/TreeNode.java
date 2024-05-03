@@ -10,26 +10,26 @@ public final class TreeNode {
     public TreeNode parent;
     private int size;
 
-    public TreeNode(int data) {
+    public TreeNode(final int data) {
         this.data = data;
         size = 1;
     }
 
-    private void setLeftChild(TreeNode left) {
+    private void setLeftChild(final TreeNode left) {
         this.left = left;
         if (left != null) {
             left.parent = this;
         }
     }
 
-    private void setRightChild(TreeNode right) {
+    private void setRightChild(final TreeNode right) {
         this.right = right;
         if (right != null) {
             right.parent = this;
         }
     }
 
-    public void insertInOrder(int data) {
+    public void insertInOrder(final int data) {
         if (data <= this.data) {
             if (left == null) {
                 setLeftChild(new TreeNode(data));
@@ -71,7 +71,7 @@ public final class TreeNode {
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
-    public TreeNode find(int data) {
+    public TreeNode find(final int data) {
         if (data == this.data) {
             return this;
         } else if (data <= this.data) {
@@ -81,7 +81,7 @@ public final class TreeNode {
         }
     }
 
-    private static TreeNode createMinimalBST(int[] array, int start, int end) {
+    private static TreeNode createMinimalBST(final int[] array, final int start, final int end) {
         if (end < start) {
             return null;
         }
@@ -93,7 +93,7 @@ public final class TreeNode {
         return n;
     }
 
-    public static TreeNode createMinimalBST(int[] array) {
+    public static TreeNode createMinimalBST(final int[] array) {
         return createMinimalBST(array, 0, array.length - 1);
     }
 
