@@ -44,7 +44,7 @@ public final class TrieNode {
             return;
         }
 
-        char firstChar = word.charAt(0);
+        final char firstChar = word.charAt(0);
         TrieNode child = getChild(firstChar);
         if (child == null) {
             child = new TrieNode(firstChar);
