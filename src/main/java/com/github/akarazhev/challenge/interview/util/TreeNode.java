@@ -1,6 +1,6 @@
 package com.github.akarazhev.challenge.interview.util;
 
-/*
+/**
  * One node of a binary tree. The data element stored is a single character.
  */
 public final class TreeNode {
