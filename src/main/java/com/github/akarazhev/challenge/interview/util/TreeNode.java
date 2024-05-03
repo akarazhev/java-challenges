@@ -59,9 +59,7 @@ public final class TreeNode {
         }
 
         if (right != null) {
-            if (data >= right.data || !right.isBST()) {
-                return false;
-            }
+            return data < right.data && right.isBST();
         }
 
         return true;
