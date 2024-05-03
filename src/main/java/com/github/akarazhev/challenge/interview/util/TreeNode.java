@@ -66,8 +66,8 @@ public final class TreeNode {
     }
 
     public int height() {
-        int leftHeight = left != null ? left.height() : 0;
-        int rightHeight = right != null ? right.height() : 0;
+        final int leftHeight = left != null ? left.height() : 0;
+        final int rightHeight = right != null ? right.height() : 0;
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
@@ -86,8 +86,8 @@ public final class TreeNode {
             return null;
         }
 
-        int mid = (start + end) / 2;
-        TreeNode n = new TreeNode(array[mid]);
+        final int mid = (start + end) / 2;
+        final TreeNode n = new TreeNode(array[mid]);
         n.setLeftChild(createMinimalBST(array, start, mid - 1));
         n.setRightChild(createMinimalBST(array, mid + 1, end));
         return n;
