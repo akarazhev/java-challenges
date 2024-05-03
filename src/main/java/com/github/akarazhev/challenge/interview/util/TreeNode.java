@@ -10,8 +10,8 @@ public final class TreeNode {
     public TreeNode parent;
     private int size;
 
-    public TreeNode(int d) {
-        data = d;
+    public TreeNode(int data) {
+        this.data = data;
         size = 1;
     }
 
@@ -29,18 +29,18 @@ public final class TreeNode {
         }
     }
 
-    public void insertInOrder(int d) {
-        if (d <= data) {
+    public void insertInOrder(int data) {
+        if (data <= this.data) {
             if (left == null) {
-                setLeftChild(new TreeNode(d));
+                setLeftChild(new TreeNode(data));
             } else {
-                left.insertInOrder(d);
+                left.insertInOrder(data);
             }
         } else {
             if (right == null) {
-                setRightChild(new TreeNode(d));
+                setRightChild(new TreeNode(data));
             } else {
-                right.insertInOrder(d);
+                right.insertInOrder(data);
             }
         }
 
@@ -71,13 +71,13 @@ public final class TreeNode {
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
-    public TreeNode find(int d) {
-        if (d == data) {
+    public TreeNode find(int data) {
+        if (data == this.data) {
             return this;
-        } else if (d <= data) {
-            return left != null ? left.find(d) : null;
+        } else if (data <= this.data) {
+            return left != null ? left.find(data) : null;
         } else {
-            return right != null ? right.find(d) : null;
+            return right != null ? right.find(data) : null;
         }
     }
 
