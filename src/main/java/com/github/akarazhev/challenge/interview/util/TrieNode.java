@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * One node in the trie. Most of the logic of the trie is implemented in this class.
  */
-public class TrieNode {
+public final class TrieNode {
     /* The children of this node in the trie.*/
     private final HashMap<Character, TrieNode> children;
     private boolean terminates = false;
@@ -24,7 +24,7 @@ public class TrieNode {
      * Constructs a trie node and stores in the node the char passed in as the argument.
      * Initializes the list of child nodes of this node to an empty hash map.
      */
-    public TrieNode(char character) {
+    public TrieNode(final char character) {
         this();
         this.character = character;
     }
@@ -39,7 +39,7 @@ public class TrieNode {
     /**
      * Add this word to the trie, and recursively create the child nodes.
      */
-    public void addWord(String word) {
+    public void addWord(final String word) {
         if (word == null || word.isEmpty()) {
             return;
         }
@@ -62,7 +62,7 @@ public class TrieNode {
      * Find a child node of this node that has the char argument as its data.
      * Return null if no such child node is present in the trie.
      */
-    public TrieNode getChild(char child) {
+    public TrieNode getChild(final char child) {
         return children.get(child);
     }
 
@@ -76,7 +76,7 @@ public class TrieNode {
     /**
      * Set whether this node is the end of a complete word.
      */
-    public void setTerminates(boolean terminates) {
+    public void setTerminates(final boolean terminates) {
         this.terminates = terminates;
     }
 }
