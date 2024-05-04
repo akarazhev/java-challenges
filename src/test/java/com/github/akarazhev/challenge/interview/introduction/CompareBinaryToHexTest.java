@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Compare Binary To Hex Test")
-public class CompareBinaryToHexTest {
+public final class CompareBinaryToHexTest {
 
     @Test
     @DisplayName("Compare Bin To Hex")

@@ -1,27 +1,27 @@
 package com.github.akarazhev.challenge.interview.introduction;
 
-public class CompareBinaryToHex {
+public final class CompareBinaryToHex {
 
-    private static int digitToValue(char c) {
-        if (c >= '0' && c <= '9') {
-            return c - '0';
-        } else if (c >= 'A' && c <= 'F') {
-            return 10 + c - 'A';
-        } else if (c >= 'a' && c <= 'f') {
-            return 10 + c - 'a';
+    private static int digitToValue(final char character) {
+        if (character >= '0' && character <= '9') {
+            return character - '0';
+        } else if (character >= 'A' && character <= 'F') {
+            return 10 + character - 'A';
+        } else if (character >= 'a' && character <= 'f') {
+            return 10 + character - 'a';
         }
 
         return -1;
     }
 
-    private static int convertFromBase(String number, int base) {
+    private static int convertFromBase(final String number, final int base) {
         if (base < 2 || (base > 10 && base != 16)) {
             return -1;
         }
 
-        int exp, value = 0;
+        int exp, digit, value = 0;
         for (int i = number.length() - 1; i >= 0; i--) {
-            int digit = digitToValue(number.charAt(i));
+            digit = digitToValue(number.charAt(i));
             if (digit < 0 || digit >= base) {
                 return -1;
             }
@@ -33,9 +33,9 @@ public class CompareBinaryToHex {
         return value;
     }
 
-    public static boolean compareBinToHex(String binary, String hex) {
-        int n1 = convertFromBase(binary, 2);
-        int n2 = convertFromBase(hex, 16);
+    public static boolean compareBinToHex(final String binary, final String hex) {
+        final int n1 = convertFromBase(binary, 2);
+        final int n2 = convertFromBase(hex, 16);
         if (n1 < 0 || n2 < 0) {
             return false;
         }
