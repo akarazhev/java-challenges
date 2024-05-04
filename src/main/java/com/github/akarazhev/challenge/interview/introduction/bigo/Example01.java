@@ -1,6 +1,6 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public final class Ex01 {
+public final class Example01 {
 
     public static int sum(final int n) {
         if (n <= 0) {
