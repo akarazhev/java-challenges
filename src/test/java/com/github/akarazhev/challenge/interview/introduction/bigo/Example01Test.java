@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Example01Test {
 
     @Test
-    @DisplayName("Check Sum")
-    public void checkSum() {
+    @DisplayName("Test Sum")
+    public void testSum() {
         assertEquals(10, Example01.sum(4));
     }
 }
