@@ -8,7 +8,7 @@ public final class Example08Test {
 
     @Test
     @DisplayName("Test Print Pairs")
-    public void testPrintPairs() {
+    public void testPrintUnorderedPairs() {
         Example08.printUnorderedPairs(new int[]{0, 1, 2, 3});
     }
 }
