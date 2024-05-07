@@ -25,10 +25,4 @@ public final class Example03 {
 
         return new int[]{min, max};
     }
-
-    public static void main(String[] args) {
-        int[] array = {1, 2, 5, 2, 2, 5, -1, 9, 3};
-        minAndMax1(array);
-        minAndMax2(array);
-    }
 }
