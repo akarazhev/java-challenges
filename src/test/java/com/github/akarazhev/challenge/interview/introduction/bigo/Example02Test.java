@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Example 02 Test")
-public class Example02Test {
+public final class Example02Test {
 
     @Test
     @DisplayName("Test Pair Sum Sequence")
