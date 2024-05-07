@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("Example 01 Test")
+@DisplayName("Example 02 Test")
 public class Example02Test {
 
     @Test
-    @DisplayName("Check Sum")
+    @DisplayName("Test Pair Sum Sequence")
     public void testPairSumSequence() {
         assertEquals(16, Example02.pairSumSequence(4));
     }
