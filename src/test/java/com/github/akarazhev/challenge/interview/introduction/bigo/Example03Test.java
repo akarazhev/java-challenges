@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Example 03 Test")
-public class Example03Test {
+public final class Example03Test {
 
     @Test
     @DisplayName("Test Min And Max 1")
