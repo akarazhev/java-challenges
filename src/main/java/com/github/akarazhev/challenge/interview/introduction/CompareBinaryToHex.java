@@ -2,13 +2,13 @@ package com.github.akarazhev.challenge.interview.introduction;
 
 public final class CompareBinaryToHex {
 
-    private static int digitToValue(final char character) {
-        if (character >= '0' && character <= '9') {
-            return character - '0';
-        } else if (character >= 'A' && character <= 'F') {
-            return 10 + character - 'A';
-        } else if (character >= 'a' && character <= 'f') {
-            return 10 + character - 'a';
+    private static int digitToValue(final char c) {
+        if (c >= '0' && c <= '9') {
+            return c - '0';
+        } else if (c >= 'A' && c <= 'F') {
+            return 10 + c - 'A';
+        } else if (c >= 'a' && c <= 'f') {
+            return 10 + c - 'a';
         }
 
         return -1;
@@ -34,8 +34,8 @@ public final class CompareBinaryToHex {
     }
 
     public static boolean compareBinToHex(final String binary, final String hex) {
-        final int n1 = convertFromBase(binary, 2);
-        final int n2 = convertFromBase(hex, 16);
+        int n1 = convertFromBase(binary, 2);
+        int n2 = convertFromBase(hex, 16);
         if (n1 < 0 || n2 < 0) {
             return false;
         }
