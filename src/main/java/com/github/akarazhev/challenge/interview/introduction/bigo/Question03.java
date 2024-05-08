@@ -1,16 +1,13 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public class Question03 {
+public final class Question03 {
 
-    public static int mod(int a, int b) {
+    public static int mod(final int a, final int b) {
         if (b <= 0) {
             return -1;
         }
+
         int div = a / b;
         return a - div * b;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(mod(3, 6));
     }
 }
