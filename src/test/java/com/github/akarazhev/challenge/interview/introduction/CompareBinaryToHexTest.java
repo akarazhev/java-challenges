@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public final class CompareBinaryToHexTest {
 
     @Test
-    @DisplayName("Compare Bin To Hex")
-    public void compareBinToHex() {
+    @DisplayName("Test Compare Bin To Hex")
+    public void testCompareBinToHex() {
         assertTrue(CompareBinaryToHex.compareBinToHex("111001011", "1CB"));
     }
 }
