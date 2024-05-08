@@ -1,12 +1,11 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public class Question12 {
+public final class Question12 {
 
-    public static int binarySearch(int[] a, int x) {
+    private static int binarySearch(final int[] a, final int x) {
         int low = 0;
         int high = a.length - 1;
         int mid;
-
         while (low <= high) {
             mid = (low + high) / 2;
             if (a[mid] < x) {
@@ -17,15 +16,16 @@ public class Question12 {
                 return mid;
             }
         }
+
         return -1;
     }
 
-    public static void mergesort(int[] array) {
+    private static void mergesort(final int[] array) {
         int[] helper = new int[array.length];
         mergesort(array, helper, 0, array.length - 1);
     }
 
-    public static void mergesort(int[] array, int[] helper, int low, int high) {
+    private static void mergesort(final int[] array, final int[] helper, final int low, final int high) {
         if (low < high) {
             int middle = (low + high) / 2;
             mergesort(array, helper, low, middle); // Sort left half
@@ -34,7 +34,7 @@ public class Question12 {
         }
     }
 
-    public static void merge(int[] array, int[] helper, int low, int middle, int high) {
+    private static void merge(final int[] array, final int[] helper, final int low, final int middle, final int high) {
         /* Copy both halves into a helper array */
         for (int i = low; i <= high; i++) {
             helper[i] = array[i];
@@ -43,7 +43,6 @@ public class Question12 {
         int helperLeft = low;
         int helperRight = middle + 1;
         int current = low;
-
         /* Iterate through helper array. Compare the left and right
          * half, copying back the smaller element from the two halves
          * into the original array. */
@@ -57,7 +56,6 @@ public class Question12 {
             }
             current++;
         }
-
         /* Copy the rest of the left side of the array into the
          * target array */
         int remaining = middle - helperLeft;
@@ -66,10 +64,9 @@ public class Question12 {
         }
     }
 
-    public static int intersection(int[] a, int[] b) {
+    public static int intersection(final int[] a, final int[] b) {
         mergesort(b);
         int intersect = 0;
-
         for (int x : a) {
             if (binarySearch(b, x) >= 0) {
                 intersect++;
@@ -77,12 +74,5 @@ public class Question12 {
         }
 
         return intersect;
-    }
-
-    public static void main(String[] args) {
-        int[] a = {1, 3, 5, 7};
-        int[] b = {1, 9, 2, 7};
-        int x = intersection(a, b);
-        System.out.println(x);
     }
 }
