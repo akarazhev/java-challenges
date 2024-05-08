@@ -20,8 +20,4 @@ public final class Question05 {
             return sqrtHelper(n, min, guess - 1); // try lower
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(sqrt(26));
-    }
 }
