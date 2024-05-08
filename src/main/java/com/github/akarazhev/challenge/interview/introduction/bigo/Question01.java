@@ -1,16 +1,13 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public class Question01 {
+public final class Question01 {
 
-    public static int product(int a, int b) {
+    public static int product(final int a, final int b) {
         int sum = 0;
         for (int i = 0; i < b; i++) {
             sum += a;
         }
-        return sum;
-    }
 
-    public static void main(String[] args) {
-        System.out.println(product(5, 6));
+        return sum;
     }
 }
