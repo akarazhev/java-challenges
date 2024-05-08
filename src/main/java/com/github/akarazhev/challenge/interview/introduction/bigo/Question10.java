@@ -1,6 +1,6 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public class Question10 {
+public final class Question10 {
 
     public static int sumDigits(int n) {
         int sum = 0;
@@ -8,10 +8,7 @@ public class Question10 {
             sum += n % 10;
             n /= 10;
         }
-        return sum;
-    }
 
-    public static void main(String[] args) {
-        System.out.println(sumDigits(1252));
+        return sum;
     }
 }
