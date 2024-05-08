@@ -1,16 +1,17 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-public class Question09 {
+public final class Question09 {
 
-    public static int[] copyArray(int[] array) {
+    public static int[] copyArray(final int[] array) {
         int[] copy = new int[0];
         for (int value : array) {
             copy = appendToNew(copy, value);
         }
+
         return copy;
     }
 
-    public static int[] appendToNew(int[] array, int value) {
+    private static int[] appendToNew(final int[] array, final int value) {
         // copy all elements over to new array
         int[] bigger = new int[array.length + 1];
         for (int i = 0; i < array.length; i++) {
@@ -20,13 +21,5 @@ public class Question09 {
         // add new element
         bigger[bigger.length - 1] = value;
         return bigger;
-    }
-
-    public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6};
-        int[] copy = copyArray(array);
-        for (int x : copy) {
-            System.out.println(x);
-        }
     }
 }
