@@ -13,8 +13,4 @@ public final class Example20 {
             return curr;
         }
     }
-
-    public static void main(String[] args) {
-        powersOf2(100);
-    }
 }
