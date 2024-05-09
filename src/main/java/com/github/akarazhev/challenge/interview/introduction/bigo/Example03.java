@@ -6,8 +6,13 @@ public final class Example03 {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int x : array) {
-            if (x < min) min = x;
-            if (x > max) max = x;
+            if (x < min) {
+                min = x;
+            }
+
+            if (x > max) {
+                max = x;
+            }
         }
 
         System.out.println(min + ", " + max);
@@ -17,11 +22,15 @@ public final class Example03 {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int x : array) {
-            if (x < min) min = x;
+            if (x < min) {
+                min = x;
+            }
         }
 
         for (int x : array) {
-            if (x > max) max = x;
+            if (x > max) {
+                max = x;
+            }
         }
 
         System.out.println(min + ", " + max);
