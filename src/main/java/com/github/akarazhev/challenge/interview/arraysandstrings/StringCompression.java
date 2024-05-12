@@ -62,25 +62,25 @@ public final class StringCompression {
     /**
      * Third solution
      */
-    static class ThirdSolution {
+    static final class ThirdSolution {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
          */
-        public static String compress(String string) {
-            int finalLength = countCompression(string);
-            if (finalLength >= string.length()) {
-                return string;
+        public static String compress(final String str) {
+            int finalLength = countCompression(str);
+            if (finalLength >= str.length()) {
+                return str;
             }
 
             StringBuilder compressed = new StringBuilder(finalLength); // initialize capacity
             int countConsecutive = 0;
-            for (int i = 0; i < string.length(); i++) {
+            for (int i = 0; i < str.length(); i++) {
                 countConsecutive++;
 
                 /* If next character is different from current, append this char to result.*/
-                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
-                    compressed.append(string.charAt(i));
+                if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
+                    compressed.append(str.charAt(i));
                     compressed.append(countConsecutive);
                     countConsecutive = 0;
                 }
@@ -89,14 +89,14 @@ public final class StringCompression {
             return compressed.toString();
         }
 
-        private static int countCompression(String string) {
+        private static int countCompression(final String str) {
             int compressedLength = 0;
             int countConsecutive = 0;
-            for (int i = 0; i < string.length(); i++) {
+            for (int i = 0; i < str.length(); i++) {
                 countConsecutive++;
 
                 /* If next character is different from current, append this char to result.*/
-                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
+                if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
                     compressedLength += 1 + String.valueOf(countConsecutive).length();
                     countConsecutive = 0;
                 }
