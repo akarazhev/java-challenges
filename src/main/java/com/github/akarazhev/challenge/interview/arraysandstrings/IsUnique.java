@@ -4,17 +4,17 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * Statement: Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?
  */
-public class IsUnique {
+public final class IsUnique {
 
     /**
      * First solution
      */
-    static class FirstSolution {
+    static final class FirstSolution {
 
         /**
          * This function takes a string and evaluates if it's the unique or not.
          */
-        public static boolean isUniqueChars(String str) {
+        public static boolean isUniqueChars(final String str) {
             if (str.length() > 128) {
                 return false;
             }
@@ -37,12 +37,12 @@ public class IsUnique {
     /**
      * Second solution
      */
-    static class SecondSolution {
+    static final class SecondSolution {
 
         /**
          * This function takes a string and evaluates if it's the unique or not. Assumes only letters a through z.
          */
-        public static boolean isUniqueChars(String str) {
+        public static boolean isUniqueChars(final String str) {
             if (str.length() > 26) { // Only 26 characters
                 return false;
             }
