@@ -13,11 +13,11 @@ public class PalindromePermutation {
 
     private static class Common {
 
-        private static int getCharNumber(Character character) {
+        private static int getCharNumber(Character c) {
             int a = Character.getNumericValue('a');
             int z = Character.getNumericValue('z');
 
-            int val = Character.getNumericValue(character);
+            int val = Character.getNumericValue(c);
             if (a <= val && val <= z) {
                 return val - a;
             }
