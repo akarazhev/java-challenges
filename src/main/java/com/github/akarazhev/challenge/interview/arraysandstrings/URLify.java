@@ -14,27 +14,27 @@ public class URLify {
     /**
      * This function replaces all spaces in a string with '%20'. Assume string has sufficient free space at the end.
      */
-    public static void replaceSpaces(char[] string, int trueLength) {
+    public static void replaceSpaces(char[] str, int trueLength) {
         int spaceCount = 0, i;
         for (i = 0; i < trueLength; i++) {
-            if (string[i] == ' ') {
+            if (str[i] == ' ') {
                 spaceCount++;
             }
         }
 
-        if (trueLength < string.length) {
-            string[trueLength] = '\0';
+        if (trueLength < str.length) {
+            str[trueLength] = '\0';
         }
 
         int index = trueLength + spaceCount * 2;
         for (i = trueLength - 1; i >= 0; i--) {
-            if (string[i] == ' ') {
-                string[index - 1] = '0';
-                string[index - 2] = '2';
-                string[index - 3] = '%';
+            if (str[i] == ' ') {
+                str[index - 1] = '0';
+                str[index - 2] = '2';
+                str[index - 3] = '%';
                 index = index - 3;
             } else {
-                string[index - 1] = string[i];
+                str[index - 1] = str[i];
                 index--;
             }
         }
