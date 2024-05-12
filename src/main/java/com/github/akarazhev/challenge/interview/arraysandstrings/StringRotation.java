@@ -5,12 +5,12 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only one call to isSubstring
  * (e.g.,"waterbottle" is a rotation of"erbottlewat").
  */
-public class StringRotation {
+public final class StringRotation {
 
     /**
      * This function takes two strings and checks if one word is a substring of another.
      */
-    public static boolean isRotation(String s1, String s2) {
+    public static boolean isRotation(final String s1, final String s2) {
         int len = s1.length();
         /* check that s1 and s2 are equal length and not empty */
         if (len == s2.length() && len > 0) {
