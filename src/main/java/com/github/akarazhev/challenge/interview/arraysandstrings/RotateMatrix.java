@@ -4,12 +4,12 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * Statement: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method
  * to rotate the image by 90 degrees. Can you do this in place?
  */
-public class RotateMatrix {
+public final class RotateMatrix {
 
     /**
      * This function takes a matrix and writes a method to rotate the image by 90 degrees.
      */
-    public static boolean rotate(int[][] matrix) {
+    public static boolean rotate(final int[][] matrix) {
         if (matrix.length == 0 || matrix.length != matrix[0].length) {
             return false; // Not a square
         }
