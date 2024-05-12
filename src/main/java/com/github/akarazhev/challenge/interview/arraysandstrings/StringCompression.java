@@ -6,56 +6,56 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * the original string, your method should return the original string. You can assume the string has only uppercase and
  * lowercase letters (a - z).
  */
-public class StringCompression {
+public final class StringCompression {
 
     /**
      * First solution
      */
-    static class FirstSolution {
+    static final class FirstSolution {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
          */
-        public static String compress(String string) {
+        public static String compress(final String str) {
             String compressedString = "";
             int countConsecutive = 0;
-            for (int i = 0; i < string.length(); i++) {
+            for (int i = 0; i < str.length(); i++) {
                 countConsecutive++;
 
                 /* If next character is different from current, append this char to result.*/
-                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
-                    compressedString += "" + string.charAt(i) + countConsecutive;
+                if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
+                    compressedString += "" + str.charAt(i) + countConsecutive;
                     countConsecutive = 0;
                 }
             }
 
-            return compressedString.length() < string.length() ? compressedString : string;
+            return compressedString.length() < str.length() ? compressedString : str;
         }
     }
 
     /**
      * Second solution
      */
-    static class SecondSolution {
+    static final class SecondSolution {
 
         /**
          * This function takes a string and performs basic string compression using the counts of repeated characters.
          */
-        public static String compress(String string) {
+        public static String compress(final String str) {
             StringBuilder compressed = new StringBuilder();
             int countConsecutive = 0;
-            for (int i = 0; i < string.length(); i++) {
+            for (int i = 0; i < str.length(); i++) {
                 countConsecutive++;
 
                 /* If next character is different from current, append this char to result.*/
-                if (i + 1 >= string.length() || string.charAt(i) != string.charAt(i + 1)) {
-                    compressed.append(string.charAt(i));
+                if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
+                    compressed.append(str.charAt(i));
                     compressed.append(countConsecutive);
                     countConsecutive = 0;
                 }
             }
 
-            return compressed.length() < string.length() ? compressed.toString() : string;
+            return compressed.length() < str.length() ? compressed.toString() : str;
         }
     }
 
