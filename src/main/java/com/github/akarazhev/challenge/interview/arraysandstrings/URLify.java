@@ -9,12 +9,12 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * Input:   "Mr John Smith    ", 13
  * Output:  "Mr$20John%20Smith"
  */
-public class URLify {
+public final class URLify {
 
     /**
      * This function replaces all spaces in a string with '%20'. Assume string has sufficient free space at the end.
      */
-    public static void replaceSpaces(char[] str, int trueLength) {
+    public static void replaceSpaces(final char[] str, final int trueLength) {
         int spaceCount = 0, i;
         for (i = 0; i < trueLength; i++) {
             if (str[i] == ' ') {
