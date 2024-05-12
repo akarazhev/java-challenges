@@ -5,14 +5,14 @@ import java.util.Arrays;
 /**
  * Statement: Given two strings, write a method to decide if one is a permutation of the other.
  */
-public class CheckPermutation {
+public final class CheckPermutation {
 
     /**
      * First Solution
      */
-    static class FirstSolution {
+    static final class FirstSolution {
 
-        private static String sort(String s) {
+        private static String sort(final String s) {
             char[] content = s.toCharArray();
             Arrays.sort(content);
             return new String(content);
@@ -21,7 +21,7 @@ public class CheckPermutation {
         /**
          * This function takes two strings and evaluates if one is a permutation of the other.
          */
-        public static boolean permutation(String s, String t) {
+        public static boolean permutation(final String s, final String t) {
             return sort(s).equals(sort(t));
         }
     }
@@ -29,12 +29,12 @@ public class CheckPermutation {
     /**
      * Second Solution
      */
-    static class SecondSolution {
+    static final class SecondSolution {
 
         /**
          * This function takes two strings and evaluates if one is a permutation of the other.
          */
-        public static boolean permutation(String s, String t) {
+        public static boolean permutation(final String s, final String t) {
             if (s.length() != t.length()) {
                 return false; // Permutations must be same length
             }
