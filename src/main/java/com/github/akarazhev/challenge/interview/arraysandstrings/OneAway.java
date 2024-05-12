@@ -10,14 +10,14 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * pale,  bale -> true
  * pale,  bake -> false
  */
-public class OneAway {
+public final class OneAway {
 
     /**
      * First solution
      */
-    static class FirstSolution {
+    static final class FirstSolution {
 
-        private static boolean oneEditReplace(String s1, String s2) {
+        private static boolean oneEditReplace(final String s1, final String s2) {
             boolean foundDifference = false;
             for (int i = 0; i < s1.length(); i++) {
                 if (s1.charAt(i) != s2.charAt(i)) {
@@ -35,7 +35,7 @@ public class OneAway {
         /**
          * Check if you can insert a character into s1 to make s2.
          */
-        private static boolean oneEditInsert(String s1, String s2) {
+        private static boolean oneEditInsert(final String s1, final String s2) {
             int index1 = 0;
             int index2 = 0;
             while (index2 < s2.length() && index1 < s1.length()) {
@@ -57,7 +57,7 @@ public class OneAway {
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
          */
-        public static boolean oneEditAway(String first, String second) {
+        public static boolean oneEditAway(final String first, final String second) {
             if (first.length() == second.length()) {
                 return oneEditReplace(first, second);
             } else if (first.length() + 1 == second.length()) {
@@ -73,12 +73,12 @@ public class OneAway {
     /**
      * Second solution
      */
-    static class SecondSolution {
+    static final class SecondSolution {
 
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
          */
-        public static boolean oneEditAway(String first, String second) {
+        public static boolean oneEditAway(final String first, final String second) {
             /* Length checks. */
             if (Math.abs(first.length() - second.length()) > 1) {
                 return false;
