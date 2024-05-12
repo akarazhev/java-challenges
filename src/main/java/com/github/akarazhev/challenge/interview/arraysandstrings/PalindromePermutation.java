@@ -9,11 +9,11 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  * Input: Tact Coa
  * Output: True (permutations: "taco cat", "atco eta", etc.)
  */
-public class PalindromePermutation {
+public final class PalindromePermutation {
 
-    private static class Common {
+    private final static class Common {
 
-        private static int getCharNumber(Character c) {
+        private static int getCharNumber(final Character c) {
             int a = Character.getNumericValue('a');
             int z = Character.getNumericValue('z');
 
@@ -25,7 +25,7 @@ public class PalindromePermutation {
             return -1;
         }
 
-        private static int[] buildCharFrequencyTable(String phrase) {
+        private static int[] buildCharFrequencyTable(final String phrase) {
             int x;
             int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
             for (char c : phrase.toCharArray()) {
@@ -42,9 +42,9 @@ public class PalindromePermutation {
     /**
      * First solution
      */
-    static class FirstSolution {
+    static final class FirstSolution {
 
-        private static boolean checkMaxOneOdd(int[] table) {
+        private static boolean checkMaxOneOdd(final int[] table) {
             boolean foundOdd = false;
             for (int count : table) {
                 if (count % 2 == 1) {
@@ -62,7 +62,7 @@ public class PalindromePermutation {
         /**
          * This function takes a string and check if it is a permutation of a palindrome.
          */
-        public static boolean isPermutation(String phrase) {
+        public static boolean isPermutation(final String phrase) {
             int[] table = Common.buildCharFrequencyTable(phrase);
             return checkMaxOneOdd(table);
         }
@@ -71,12 +71,12 @@ public class PalindromePermutation {
     /**
      * Second solution
      */
-    static class SecondSolution {
+    static final class SecondSolution {
 
         /**
          * This function takes a string and check if it is a permutation of a palindrome.
          */
-        public static boolean isPermutation(String phrase) {
+        public static boolean isPermutation(final String phrase) {
             int countOdd = 0, x;
             int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
             for (char c : phrase.toCharArray()) {
@@ -99,12 +99,12 @@ public class PalindromePermutation {
     /**
      * Third solution
      */
-    static class ThirdSolution {
+    static final class ThirdSolution {
 
         /**
          * Toggle the ith bit in the integer.
          */
-        private static int toggle(int bitVector, int index) {
+        private static int toggle(int bitVector, final int index) {
             if (index < 0) {
                 return bitVector;
             }
@@ -122,7 +122,7 @@ public class PalindromePermutation {
         /**
          * Create bit vector for string. For each letter with value i, toggle the ith bit.
          */
-        private static int createBitVector(String phrase) {
+        private static int createBitVector(final String phrase) {
             int x, bitVector = 0;
             for (char c : phrase.toCharArray()) {
                 x = Common.getCharNumber(c);
@@ -135,14 +135,14 @@ public class PalindromePermutation {
         /**
          * Check that at most one bit is set by subtracting one from the integer and ANDing it with the original integer.
          */
-        private static boolean checkAtMostOneBitSet(int bitVector) {
+        private static boolean checkAtMostOneBitSet(final int bitVector) {
             return (bitVector & (bitVector - 1)) == 0;
         }
 
         /**
          * This function takes a string and check if it is a permutation of a palindrome.
          */
-        public static boolean isPermutation(String phrase) {
+        public static boolean isPermutation(final String phrase) {
             int bitVector = createBitVector(phrase);
             return checkAtMostOneBitSet(bitVector);
         }
