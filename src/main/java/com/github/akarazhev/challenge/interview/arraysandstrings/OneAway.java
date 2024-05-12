@@ -78,15 +78,15 @@ public class OneAway {
         /**
          * This function takes two strings and checks if they are one edit (or zero edits) away.
          */
-        public static boolean oneEditAway(String firstString, String secondString) {
+        public static boolean oneEditAway(String first, String second) {
             /* Length checks. */
-            if (Math.abs(firstString.length() - secondString.length()) > 1) {
+            if (Math.abs(first.length() - second.length()) > 1) {
                 return false;
             }
 
             /* Get shorter and longer string.*/
-            String shorterString = firstString.length() < secondString.length() ? firstString : secondString;
-            String longerString = firstString.length() < secondString.length() ? secondString : firstString;
+            String shorterString = first.length() < second.length() ? first : second;
+            String longerString = first.length() < second.length() ? second : first;
 
             int firstIndex = 0;
             int secondIndex = 0;
