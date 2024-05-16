@@ -19,9 +19,7 @@ related patterns to solve a diverse range of problems.
 ### Two Pointers
 
 - [Introduction](doc/twopointers/introduction.md "Introduction")
-- [Valid Palindrome](doc/twopointers/valid_palindrome.md "Valid Palindrome Task")
-- [Remove nth Node from End of List](doc/twopointers/remove_nth_node_from_end_of_list.md "Remove nth Node from End of List Task")
-- [Sort Colors](doc/twopointers/sort_colors.md "Sort Colors")
+- [Two Pointers Tasks](doc/twopointers/two_pointers.md "Two Pointers Tasks")
 
 ### Fast and Slow Pointers
 
