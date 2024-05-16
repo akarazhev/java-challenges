@@ -24,7 +24,7 @@ related patterns to solve a diverse range of problems.
 ### Fast and Slow Pointers
 
 - [Introduction](doc/fastandslowpointers/introduction.md "Introduction")
-- [happy Number](doc/fastandslowpointers/happy_number.md "happy Number Task")
+- [Fast and Slow Pointers Tasks](doc/fastandslowpointers/fast_and_slow_pointers.md "Fast and Slow Pointers Tasks")
 
 ### Modified Binary Search
 
@@ -32,5 +32,5 @@ related patterns to solve a diverse range of problems.
 
 ## Interview
 
-- [Big O](doc/interview/bigo.md "Big O")
-- [Arrays and Strings](doc/interview/arraysandstrings.md "Arrays and Strings")
+- [Big O Tasks](doc/interview/big_o "Big O Tasks")
+- [Arrays and Strings Tasks](doc/interview/arrays_and_strings "Arrays and Strings Tasks")
