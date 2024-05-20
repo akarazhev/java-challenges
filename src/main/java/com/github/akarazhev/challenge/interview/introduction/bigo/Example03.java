@@ -1,5 +1,13 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
+/**
+ * It is very possible for O(N) code to run faster than 0( 1) code for specific inputs.
+ * Big O just describes the rate of increase.
+ * For this reason, we drop the constants in runtime. An algorithm that one might have described as 0(2N) is actually O(N).
+ * <p>
+ * Big O allows us to express how the runtime scales. We just need to accept that it doesn't mean that O(N) is always
+ * better than O(N^2).
+ */
 public final class Example03 {
 
     public static void minAndMax1(final int[] array) {
