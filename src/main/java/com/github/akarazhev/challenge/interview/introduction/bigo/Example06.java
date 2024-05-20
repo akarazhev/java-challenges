@@ -1,10 +1,10 @@
 package com.github.akarazhev.challenge.interview.introduction.bigo;
 
-/**
- * This will take O(N) time. The fact that we iterate through the array twice doesn't matter.
- */
 public final class Example06 {
 
+    /**
+     * This will take O(N) time. The fact that we iterate through the array twice doesn't matter.
+     */
     public static void foo(final int[] array) {
         int sum = 0;
         int product = 1;
