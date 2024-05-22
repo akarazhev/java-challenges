@@ -2,6 +2,10 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 
 public final class Example16 {
 
+    /**
+     * Since we are calling permutation 0(n*n!) times (as an upper bound), and each one takes O(n) time,
+     * the total runtime will not exceed O(n^2*n!).
+     */
     public static void permutation(final String str) {
         permutation(str, "");
     }
