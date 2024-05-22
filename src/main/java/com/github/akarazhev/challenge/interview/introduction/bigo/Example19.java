@@ -2,6 +2,9 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 
 public final class Example19 {
 
+    /**
+     * We're doing a constant amount of work N times, so this is O(n) time.
+     */
     public static void allFib(final int n) {
         int[] memo = new int[n + 1];
         for (int i = 0; i < n; i++) {
