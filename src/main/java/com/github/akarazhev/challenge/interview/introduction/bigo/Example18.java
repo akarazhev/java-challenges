@@ -2,6 +2,10 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 
 public final class Example18 {
 
+    /**
+     * This is 2^n+1. Therefore, the runtime to compute the first n Fibonacci numbers (using this terrible algorithm)
+     * is still O(2^n)
+     */
     public static void allFib(final int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(i + ": " + fib(i));
