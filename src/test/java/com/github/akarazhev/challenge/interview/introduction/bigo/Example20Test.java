@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 public final class Example20Test {
 
     @Test
-    @DisplayName("Test Powers Of 2")
-    public void testPowersOf2() {
-        Example20.powersOf2(100);
+    @DisplayName("Test All Fib")
+    public void testAllFib() {
+        Example20.allFib(6);
     }
 }

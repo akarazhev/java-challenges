@@ -3,15 +3,21 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 public final class Example17 {
 
     /**
-     * There are 2 branches per call, and we go as deep as N, therefore the runtime is O(2^N).
+     * Since we are calling permutation O(n*n!) times (as an upper bound), and each one takes O(n) time,
+     * the total runtime will not exceed O(n^2*n!).
      */
-    public static int fib(final int n) {
-        if (n <= 0) {
-            return 0;
-        } else if (n == 1) {
-            return 1;
-        }
+    public static void permutation(final String str) {
+        permutation(str, "");
+    }
 
-        return fib(n - 1) + fib(n - 2);
+    private static void permutation(final String str, final String prefix) {
+        if (str.isEmpty()) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < str.length(); i++) {
+                String rem = str.substring(0, i) + str.substring(i + 1);
+                permutation(rem, prefix + str.charAt(i));
+            }
+        }
     }
 }

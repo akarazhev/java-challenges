@@ -2,6 +2,12 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 
 public final class Question02 {
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static int power(final int a, final int b) {
         if (b < 0) {
             return 0; // error

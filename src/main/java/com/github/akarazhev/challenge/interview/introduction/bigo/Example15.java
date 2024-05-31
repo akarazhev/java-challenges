@@ -3,15 +3,15 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 public final class Example15 {
 
     /**
-     * It will take O(n) time.
+     * This runs in O(sqrt(n)) time.
      */
-    public static int factorial(final int n) {
-        if (n < 0) {
-            return -1;
-        } else if (n == 0) {
-            return 1;
-        } else {
-            return n * factorial(n - 1);
+    public static boolean isPrime(final int n) {
+        for (int x = 2; x * x <= n; x++) {
+            if (n % x == 0) {
+                return false;
+            }
         }
+
+        return true;
     }
 }

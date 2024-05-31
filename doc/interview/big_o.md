@@ -8,7 +8,7 @@ Time is not the only thing that matters in an algorithm. We might also care abou
 space-required by an algorithm.
 
 Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will 
-require 0(n) space. If we need a two-dimensional array of size nxn, this will require O(n^2) space.
+require O(n) space. If we need a two-dimensional array of size nxn, this will require O(n^2) space.
 
 Stack space in recursive calls counts, too.
 
@@ -58,9 +58,9 @@ public final class Example02 {
 
 ```java
 /**
- * It is very possible for O(N) code to run faster than 0( 1) code for specific inputs.
+ * It is very possible for O(N) code to run faster than O( 1) code for specific inputs.
  * Big O just describes the rate of increase.
- * For this reason, we drop the constants in runtime. An algorithm that one might have described as 0(2N) is actually O(N).
+ * For this reason, we drop the constants in runtime. An algorithm that one might have described as O(2N) is actually O(N).
  * <p>
  * Big O allows us to express how the runtime scales. We just need to accept that it doesn't mean that O(N) is always
  * better than O(N^2).
@@ -221,7 +221,7 @@ public final class Example08 {
 public final class Example09 {
 
     /**
-     * The if-statement within j's for loop is 0(1) time since it's just a sequence of constant-time statements.
+     * The if-statement within j's for loop is O(1) time since it's just a sequence of constant-time statements.
      * For each element of arrayA, the inner for loop goes through b iterations, where b = arrayB.length.
      * if a = arrayA.length, then the runtime is O(ab).
      */
@@ -243,7 +243,7 @@ public final class Example09 {
 public final class Example10 {
 
     /**
-     * 1000 units of work is still constant, so the runtime is 0(ab).
+     * 1000 units of work is still constant, so the runtime is O(ab).
      */
     public static void printUnorderedPairs(final int[] arrayA, final int[] arrayB) {
         for (int j : arrayA) {
@@ -277,10 +277,69 @@ public final class Example11 {
 }
 ```
 
+## Example 12
+
+Which of the following are equivalent to O(N)? Why?
+- O(N + P), where P < N/2
+- O(2N)
+- O(N + log N)
+- O(N + M)
+
+Let's go through these.
+- If P < N/2, then we know that N is the dominant term so we can drop the O(P).
+- O(2N) is O(N) since we drop constants.
+- O(N) dominates O(log N), so we ca drop the O(log N).
+- There is no established relationship between N and M, so we have to keep both variables in there.
+
+Therefore, all but the last one are equivalent to O(N).
+
+## Example 13
+
+Suppose we had an algorithm that took in an array of strings, sorted each string, and then sorted the full array. 
+What would the runtime be?
+
+Let's define new terms-and use names that are logical.
+- Let s be the length of the longest string.
+- Let a be the length of the array.
+
+Now we can work through this in parts:
+- Sorting each string is O(s log s).
+- We have to do this for every string (and there are a strings), so that's O(a*s log s).
+- Now we have to sort all the strings. There are a strings,so you'll may be inclined to say that this takes O(a log a) time. 
+This is what most candidates would say. You should also take into account that you need to compare the strings. 
+Each string comparison takes O(s) time. There are O(a log a) comparisons, therefore this will take O(a*s log a) time.
+
+If you add up these two parts,you get O(a*s(log a + log s)).
+
 ## Example 14
 
 ```java
 public final class Example14 {
+
+    private final static class Node {
+        private Node left;
+        private Node right;
+        private int value;
+    }
+
+    /**
+     * The following simple code sums the values of all the nodes in a balanced binary search tree. What is its runtime?
+     * The runtime will be linear in terms of the number of nodes. If there are N nodes, then the runtime is O(N).
+     */
+    int sum(final Node node) {
+        if (node == null) {
+            return 0;
+        }
+
+        return sum(node.left) + node.value + sum(node.right);
+    }
+}
+```
+
+## Example 15
+
+```java
+public final class Example15 {
 
     /**
      * This runs in O(sqrt(n)) time.
@@ -297,10 +356,10 @@ public final class Example14 {
 }
 ```
 
-## Example 15
+## Example 16
 
 ```java
-public final class Example15 {
+public final class Example16 {
 
     /**
      * It will take O(n) time.
@@ -317,13 +376,13 @@ public final class Example15 {
 }
 ```
 
-## Example 16
+## Example 17
 
 ```java
-public final class Example16 {
+public final class Example17 {
 
     /**
-     * Since we are calling permutation 0(n*n!) times (as an upper bound), and each one takes O(n) time,
+     * Since we are calling permutation O(n*n!) times (as an upper bound), and each one takes O(n) time,
      * the total runtime will not exceed O(n^2*n!).
      */
     public static void permutation(final String str) {
@@ -343,10 +402,10 @@ public final class Example16 {
 }
 ```
 
-## Example 17
+## Example 18
 
 ```java
-public final class Example17 {
+public final class Example18 {
 
     /**
      * There are 2 branches per call, and we go as deep as N, therefore the runtime is O(2^N).
@@ -363,10 +422,10 @@ public final class Example17 {
 }
 ```
 
-## Example 18
+## Example 19
 
 ```java
-public final class Example18 {
+public final class Example19 {
 
     /**
      * This is 2^n+1. Therefore, the runtime to compute the first n Fibonacci numbers (using this terrible algorithm)
@@ -390,10 +449,10 @@ public final class Example18 {
 }
 ```
 
-## Example 19
+## Example 20
 
 ```java
-public final class Example19 {
+public final class Example20 {
 
     /**
      * We're doing a constant amount of work N times, so this is O(n) time.
@@ -420,13 +479,13 @@ public final class Example19 {
 }
 ```
 
-## Example 20
+## Example 21
 
 ```java
-public final class Example20 {
+public final class Example21 {
 
     /**
-     * There are log N powers of 2 between 1 and n. Therefore, the runtime is 0(log n).
+     * There are log N powers of 2 between 1 and n. Therefore, the runtime is O(log n).
      */
     public static int powersOf2(final int n) {
         if (n == 1) {

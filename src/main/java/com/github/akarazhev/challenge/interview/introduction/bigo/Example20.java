@@ -3,17 +3,25 @@ package com.github.akarazhev.challenge.interview.introduction.bigo;
 public final class Example20 {
 
     /**
-     * There are log N powers of 2 between 1 and n. Therefore, the runtime is 0(log n).
+     * We're doing a constant amount of work N times, so this is O(n) time.
      */
-    public static int powersOf2(final int n) {
-        if (n == 1) {
-            System.out.println(1);
-            return 1;
-        } else {
-            int prev = powersOf2(n / 2);
-            int curr = prev * 2;
-            System.out.println(curr);
-            return curr;
+    public static void allFib(final int n) {
+        int[] memo = new int[n + 1];
+        for (int i = 0; i < n; i++) {
+            System.out.println(i + ": " + fib(i, memo));
         }
+    }
+
+    private static int fib(final int n, final int[] memo) {
+        if (n <= 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else if (memo[n] > 0) {
+            return memo[n];
+        }
+
+        memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+        return memo[n];
     }
 }
