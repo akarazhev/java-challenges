@@ -24,12 +24,12 @@ Tests are here:
 ### Complexity
 
 The time complexity for this code is O(n), where n is the length of the string. The space complexity is O(1).
-(You could also argue the time complexity is 0(1), since the for loop will never iterate through more than 128 characters.)
+(You could also argue the time complexity is O(1), since the for loop will never iterate through more than 128 characters.)
 If you didn't want to assume the character set is fixed, you could express the complexity as O(c) space and
 O(min(c, n)) or O(c) time, where c is the size of the character set.
 
 If we can't use additional data structures, we can do the following:
-1. Compare every character of the string to every other character of the string. This will take 0(n^2) time and 0(1) space.
+1. Compare every character of the string to every other character of the string. This will take O(n^2) time and O(1) space.
 2. If we are allowed to modify the input string, we could sort the string in O(n log(n)) time and then linearly check
    the string for neighboring characters that are identical. Careful, though: many sorting algorithms take up extra space.
 
@@ -43,7 +43,7 @@ Given two strings, write a method to decide if one is a permutation of the other
 
 - Describe what it means for two strings to be permutations of each other. Now, look at that definition you provided.
   Can you check the strings against that definition?
-- There is one solution that is 0(N log N) time. Another solution uses some space, but is O(N) time.
+- There is one solution that is O(N log N) time. Another solution uses some space, but is O(N) time.
 - Could a hash table be useful?
 - Two strings that are permutations should have the same characters, but in different orders. Can you make the orders the same?
 
@@ -88,7 +88,7 @@ limited to just dictionary words.
 
 - You do not have to-and should not-generate all permutations. This would be very inefficient.
 - What characteristics would a string that is a permutation of a palindrome have?
-- Have you tried a hash table? You should be able to get this down to 0(N) time.
+- Have you tried a hash table? You should be able to get this down to O(N) time.
 - Can you reduce the space usage by using a bit vector?
 
 #### Solution
