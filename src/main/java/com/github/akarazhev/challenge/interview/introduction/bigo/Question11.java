@@ -4,6 +4,12 @@ public final class Question11 {
 
     public static int numChars = 26;
 
+    /**
+     * The following code prints all strings of length k where the characters are in sorted order. It does this by
+     * generating all strings of length k and then checking if each is sorted. What is its runtime?
+     * O(kc^k), where k is the length of the string and c is the number of characters in the alphabet. It takes O(c^k)
+     * time to generate each string. Then, we need to check that each of these is sorted, which takes O(k) time.
+     */
     public static void printSortedStrings(final int remaining) {
         printSortedStrings(remaining, "");
     }
