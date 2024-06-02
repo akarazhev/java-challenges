@@ -1,5 +1,9 @@
 package com.github.akarazhev.challenge.interview.introduction;
 
+/**
+ * Writing modular code means separating isolated chunks of code out into their own methods. This helps keep the code
+ * more maintainable, readable, and testable.
+ */
 public final class SwapMinMax {
 
     public static int getMinIndex(final int[] array) {

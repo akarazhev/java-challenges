@@ -1,5 +1,11 @@
 package com.github.akarazhev.challenge.interview.introduction;
 
+/**
+ * Suppose you were asked to write a function to check if the value of a binary number (passed as a string) equals
+ * the hexadecimal representation of a string.
+ * <p>
+ * An elegant implementation of this problem leverages code reuse.
+ */
 public final class CompareBinaryToHex {
 
     private static int digitToValue(final char c) {
