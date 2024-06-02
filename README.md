@@ -32,5 +32,6 @@ related patterns to solve a diverse range of problems.
 
 ## Interview
 
-- [Big O Tasks](doc/interview/big_o "Big O Tasks")
-- [Arrays and Strings Tasks](doc/interview/arrays_and_strings "Arrays and Strings Tasks")
+- [Big O](doc/interview/big_o "Big O")
+- [Technical Questions](doc/interview/technical_questions.md "Technical Questions")
+- [Arrays and Strings](doc/interview/arrays_and_strings "Arrays and Strings")
