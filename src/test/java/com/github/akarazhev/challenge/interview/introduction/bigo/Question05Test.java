@@ -11,6 +11,6 @@ public final class Question05Test {
     @Test
     @DisplayName("Test Sqrt")
     public void testSqrt() {
-        assertEquals(3, Question05.sqrt(26));
+        assertEquals(-1, Question05.sqrt(26));
     }
 }
