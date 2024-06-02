@@ -14,12 +14,11 @@ Stack space in recursive calls counts, too.
 
 ## Example 1
 
+This would take O(n) time and O(n) space.
+
 ```java
 public final class Example01 {
 
-    /**
-     * This would take O(n) time and O(n) space.
-     */
     public static int sum(final int n) {
         if (n <= 0) {
             return 0;
@@ -32,6 +31,9 @@ public final class Example01 {
 
 ## Example 2
 
+There will be roughly O(n) calls to pairSum. However, those calls do not exist simultaneously on the call stack, 
+so you only need O(1) space.
+
 ```java
 public final class Example02 {
 
@@ -39,10 +41,6 @@ public final class Example02 {
         return a + b;
     }
 
-    /**
-     * There will be roughly O(n) calls to pairSum. However, those calls do not exist simultaneously on the call stack,
-     * so you only need O(1) space.
-     */
     public static int pairSumSequence(final int n) {
         int sum = 0;
         for (int i = 0; i < n; i++) {
@@ -56,15 +54,13 @@ public final class Example02 {
 
 ## Example 3
 
+It is very possible for O(N) code to run faster than O( 1) code for specific inputs. Big O just describes the rate of increase.
+For this reason, we drop the constants in runtime. An algorithm that one might have described as O(2N) is actually O(N).
+
+Big O allows us to express how the runtime scales. We just need to accept that it doesn't mean that O(N) is always
+better than O(N^2).
+
 ```java
-/**
- * It is very possible for O(N) code to run faster than O( 1) code for specific inputs.
- * Big O just describes the rate of increase.
- * For this reason, we drop the constants in runtime. An algorithm that one might have described as O(2N) is actually O(N).
- * <p>
- * Big O allows us to express how the runtime scales. We just need to accept that it doesn't mean that O(N) is always
- * better than O(N^2).
- */
 public final class Example03 {
 
     public static void minAndMax1(final int[] array) {
@@ -105,12 +101,13 @@ public final class Example03 {
 
 ## Example 4
 
+We do A chunks of work then B chunks of work. Therefore, the total amount of work is O(A + B).
+
+We do B chunks of work for each element in A. Therefore, the total amount of work is O(A * B).
+
 ```java
 public final class Example04 {
 
-    /**
-     * We do A chunks of work then B chunks of work. Therefore, the total amount of work is O(A + B).
-     */
     public static void foo(final int[] arrA, final int[] arrB) {
         for (int a : arrA) {
             System.out.println(a);
@@ -121,9 +118,6 @@ public final class Example04 {
         }
     }
 
-    /**
-     * We do B chunks of work for each element in A. Therefore, the total amount of work is O(A * B).
-     */
     public static void bar(final int[] arrA, final int[] arrB) {
         for (int a : arrA) {
             for (int b : arrB) {
@@ -136,14 +130,13 @@ public final class Example04 {
 
 ## Example 5
 
+When you have a recursive function that makes multiple calls, the runtime will often (but not always) look
+like O(branches^depth), where branches is the number of times each recursive call branches. In this case,
+this gives us O(2^N).
+
 ```java
 public final class Example05 {
 
-    /**
-     * When you have a recursive function that makes multiple calls, the runtime will often (but not always) look
-     * like O(branches^depth), where branches is the number of times each recursive call branches. In this case,
-     * this gives us O(2^N).
-     */
     public static int f(final int n) {
         if (n <= 0) {
             return 1;
@@ -156,12 +149,11 @@ public final class Example05 {
 
 ## Example 6
 
+This will take O(N) time. The fact that we iterate through the array twice doesn't matter.
+
 ```java
 public final class Example06 {
 
-    /**
-     * This will take O(N) time. The fact that we iterate through the array twice doesn't matter.
-     */
     public static void foo(final int[] array) {
         int sum = 0;
         int product = 1;
@@ -180,12 +172,11 @@ public final class Example06 {
 
 ## Example 7
 
+The inner for loop has O(N) iterations, and it is called N times. Therefore, the runtime is O(N^2).
+
 ```java
 public final class Example07 {
 
-    /**
-     * The inner for loop has O(N) iterations, and it is called N times. Therefore, the runtime is O(N^2).
-     */
     public static void printPairs(final int[] array) {
         for (int k : array) {
             for (int i : array) {
@@ -198,13 +189,12 @@ public final class Example07 {
 
 ## Example 8
 
+There are N^2 total pairs. Roughly half of those will have i < j and the remaining half will have i > j.
+This code goes through roughly N^2/2 pairs, so it does O(N^2) work.
+
 ```java
 public final class Example08 {
 
-    /**
-     * There are N^2 total pairs. Roughly half of those will have i < j and the remaining half will have i > j.
-     * This code goes through roughly N^2/2 pairs, so it does O(N^2) work.
-     */
     public static void printUnorderedPairs(final int[] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = i; j < array.length; j++) {
@@ -217,14 +207,13 @@ public final class Example08 {
 
 ## Example 9
 
+The if-statement within j's for loop is O(1) time since it's just a sequence of constant-time statements.
+For each element of arrayA, the inner for loop goes through b iterations, where b = arrayB.length.
+if a = arrayA.length, then the runtime is O(ab).
+
 ```java
 public final class Example09 {
 
-    /**
-     * The if-statement within j's for loop is O(1) time since it's just a sequence of constant-time statements.
-     * For each element of arrayA, the inner for loop goes through b iterations, where b = arrayB.length.
-     * if a = arrayA.length, then the runtime is O(ab).
-     */
     public static void printUnorderedPairs(final int[] arrayA, final int[] arrayB) {
         for (int k : arrayA) {
             for (int i : arrayB) {
@@ -239,12 +228,11 @@ public final class Example09 {
 
 ## Example 10
 
+1000 units of work is still constant, so the runtime is O(ab).
+
 ```java
 public final class Example10 {
 
-    /**
-     * 1000 units of work is still constant, so the runtime is O(ab).
-     */
     public static void printUnorderedPairs(final int[] arrayA, final int[] arrayB) {
         for (int j : arrayA) {
             for (int value : arrayB) {
@@ -259,13 +247,12 @@ public final class Example10 {
 
 ## Example 11
 
+This algorithm runs in O(N) time. The fact that it only goes through half of the array (in terms of iterations)
+does not impact the big O time.
+
 ```java
 public final class Example11 {
 
-    /**
-     * This algorithm runs in O(N) time. The fact that it only goes through half of the array (in terms of iterations)
-     * does not impact the big O time.
-     */
     public static void reverse(final int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int other = array.length - i - 1;
@@ -313,6 +300,9 @@ If you add up these two parts,you get O(a*s(log a + log s)).
 
 ## Example 14
 
+The following simple code sums the values of all the nodes in a balanced binary search tree. What is its runtime?
+The runtime will be linear in terms of the number of nodes. If there are N nodes, then the runtime is O(N).
+
 ```java
 public final class Example14 {
 
@@ -322,10 +312,6 @@ public final class Example14 {
         private int value;
     }
 
-    /**
-     * The following simple code sums the values of all the nodes in a balanced binary search tree. What is its runtime?
-     * The runtime will be linear in terms of the number of nodes. If there are N nodes, then the runtime is O(N).
-     */
     int sum(final Node node) {
         if (node == null) {
             return 0;
@@ -338,12 +324,11 @@ public final class Example14 {
 
 ## Example 15
 
+This runs in O(sqrt(n)) time.
+
 ```java
 public final class Example15 {
 
-    /**
-     * This runs in O(sqrt(n)) time.
-     */
     public static boolean isPrime(final int n) {
         for (int x = 2; x * x <= n; x++) {
             if (n % x == 0) {
@@ -358,12 +343,11 @@ public final class Example15 {
 
 ## Example 16
 
+It will take O(n) time.
+
 ```java
 public final class Example16 {
 
-    /**
-     * It will take O(n) time.
-     */
     public static int factorial(final int n) {
         if (n < 0) {
             return -1;
@@ -378,13 +362,12 @@ public final class Example16 {
 
 ## Example 17
 
+Since we are calling permutation O(n*n!) times (as an upper bound), and each one takes O(n) time,
+the total runtime will not exceed O(n^2*n!).
+
 ```java
 public final class Example17 {
 
-    /**
-     * Since we are calling permutation O(n*n!) times (as an upper bound), and each one takes O(n) time,
-     * the total runtime will not exceed O(n^2*n!).
-     */
     public static void permutation(final String str) {
         permutation(str, "");
     }
@@ -404,12 +387,11 @@ public final class Example17 {
 
 ## Example 18
 
+There are 2 branches per call, and we go as deep as N, therefore the runtime is O(2^N).
+
 ```java
 public final class Example18 {
 
-    /**
-     * There are 2 branches per call, and we go as deep as N, therefore the runtime is O(2^N).
-     */
     public static int fib(final int n) {
         if (n <= 0) {
             return 0;
@@ -424,13 +406,11 @@ public final class Example18 {
 
 ## Example 19
 
+This is 2^n+1. Therefore, the runtime to compute the first n Fibonacci numbers (using this terrible algorithm) is still O(2^n).
+
 ```java
 public final class Example19 {
 
-    /**
-     * This is 2^n+1. Therefore, the runtime to compute the first n Fibonacci numbers (using this terrible algorithm)
-     * is still O(2^n)
-     */
     public static void allFib(final int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(i + ": " + fib(i));
@@ -451,12 +431,11 @@ public final class Example19 {
 
 ## Example 20
 
+We're doing a constant amount of work N times, so this is O(n) time.
+
 ```java
 public final class Example20 {
 
-    /**
-     * We're doing a constant amount of work N times, so this is O(n) time.
-     */
     public static void allFib(final int n) {
         int[] memo = new int[n + 1];
         for (int i = 0; i < n; i++) {
@@ -481,12 +460,11 @@ public final class Example20 {
 
 ## Example 21
 
+There are log N powers of 2 between 1 and n. Therefore, the runtime is O(log n).
+
 ```java
 public final class Example21 {
 
-    /**
-     * There are log N powers of 2 between 1 and n. Therefore, the runtime is O(log n).
-     */
     public static int powersOf2(final int n) {
         if (n == 1) {
             System.out.println(1);
@@ -503,13 +481,12 @@ public final class Example21 {
 
 ## Question 1
 
+The following code computes the product of a and b. What is its runtime?
+O(b). The for loop just iterates through b.
+
 ```java
 public final class Question01 {
 
-    /**
-     * The following code computes the product of a and b. What is its runtime?
-     * O(b). The for loop just iterates through b.
-     */
     public static int product(final int a, final int b) {
         int sum = 0;
         for (int i = 0; i < b; i++) {
@@ -523,13 +500,12 @@ public final class Question01 {
 
 ## Question 2
 
+The following code computes a^b. What is its runtime?
+O(b). The recursive code iterates through b calls, since it subtracts one at each level.
+
 ```java
 public final class Question02 {
 
-    /**
-     * The following code computes a^b. What is its runtime?
-     * O(b). The recursive code iterates through b calls, since it subtracts one at each level.
-     */
     public static int power(final int a, final int b) {
         if (b < 0) {
             return 0; // error
@@ -544,13 +520,12 @@ public final class Question02 {
 
 ## Question 3
 
+The following code computes a % b. What is its runtime?
+O(1). It does a constant amount of work.
+
 ```java
 public final class Question03 {
 
-    /**
-     * The following code computes a % b. What is its runtime?
-     * O(1). It does a constant amount of work.
-     */
     public static int mod(final int a, final int b) {
         if (b <= 0) {
             return -1;
@@ -564,14 +539,13 @@ public final class Question03 {
 
 ## Question 4
 
+The following code performs integer division. What is its runtime (assume a and b are both positive)?
+O(a/b). The variable count will eventually equal a/b. The while loop iterates count times. Therefore,
+it iterates a/b times.
+
 ```java
 public final class Question04 {
 
-    /**
-     * The following code performs integer division. What is its runtime (assume a and b are both positive)?
-     * O(a/b). The variable count will eventually equal a/b. The while loop iterates count times. Therefore,
-     * it iterates a/b times.
-     */
     public static int div(final int a, final int b) {
         int count = 0;
         int sum = b;
@@ -587,16 +561,15 @@ public final class Question04 {
 
 ## Question 5
 
+The following code computes the [integer] square root of a number. If the number is not a perfect square
+(there is no integer square root), then it returns -1. It does this by successive guessing. If n is 100,
+it first guesses 50. Too high? Try something lower - halfway between 1 and SO. What is its runtime?
+O(log n). This algorithm is essentially doing a binary search to find the square root. Therefore, the runtime is
+O(log n).
+
 ```java
 public final class Question05 {
 
-    /**
-     * The following code computes the [integer] square root of a number. If the number is not a perfect square
-     * (there is no integer square root), then it returns -1. It does this by successive guessing. If n is 100,
-     * it first guesses 50. Too high? Try something lower - halfway between 1 and SO. What is its runtime?
-     * O(log n). This algorithm is essentially doing a binary search to find the square root. Therefore, the runtime is
-     * O(log n).
-     */
     public static int sqrt(final int n) {
         return sqrtHelper(n, 1, n);
     }
@@ -620,16 +593,15 @@ public final class Question05 {
 
 ## Question 6
 
+The following code computes the [integer] square root of a number. If the number is not a perfect square
+(there is no integer square root), then it returns -1. It does this by trying increasingly large numbers
+until it finds the right value (or is too high). What is its runtime?
+O(sqrt(n)). This is just a straightforward loop that stops when guess * guess > n (or, in other words, when
+guess > sqrt(n)).
+
 ```java
 public final class Question06 {
 
-    /**
-     * The following code computes the [integer] square root of a number. If the number is not a perfect square
-     * (there is no integer square root), then it returns -1. It does this by trying increasingly large numbers
-     * until it finds the right value (or is too high). What is its runtime?
-     * O(sqrt(n)). This is just a straightforward loop that stops when guess * guess > n (or, in other words, when
-     * guess > sqrt(n)).
-     */
     public static int sqrt(final int n) {
         for (int guess = 1; guess * guess <= n; guess++) {
             if (guess * guess == n) {
@@ -655,17 +627,16 @@ O(n). Without any ordering property on the nodes, we might have to search throug
 
 ## Question 9
 
+The appendToNew method appends a value to an array by creating a new, longer array and returning this longer array.
+You've used the appendToNew method to create a copyArray function that repeatedly calls appendToNew.
+How long does copying an array take?
+O(n^2), where n is the number of elements in the array. The first call to appendToNew takes 1 copy. The second
+call takes 2 copies. The third call takes 3 copies. And so on. The total time will be the sum of 1 through n,
+which is O(n^2).
+
 ```java
 public final class Question09 {
 
-    /**
-     * The appendToNew method appends a value to an array by creating a new, longer array and returning this longer array.
-     * You've used the appendToNew method to create a copyArray function that repeatedly calls appendToNew.
-     * How long does copying an array take?
-     * O(n^2), where n is the number of elements in the array. The first call to appendToNew takes 1 copy. The second
-     * call takes 2 copies. The third call takes 3 copies. And so on. The total time will be the sum of 1 through n,
-     * which is O(n^2).
-     */
     public static int[] copyArray(final int[] array) {
         int[] copy = new int[0];
         for (int value : array) {
@@ -691,14 +662,13 @@ public final class Question09 {
 
 ## Question 10
 
+The following code sums the digits in a number. What is its big O time?
+O(log n). The runtime will be the number of digits in the number. A number with d digits can have a value up to
+10^d. If n = 10^d, then d = log n. Therefore, the runtime is O(log n).
+
 ```java
 public final class Question10 {
 
-    /**
-     * The following code sums the digits in a number. What is its big O time?
-     * O(log n). The runtime will be the number of digits in the number. A number with d digits can have a value up to
-     * 10^d. If n = 10^d, then d = log n. Therefore, the runtime is O(log n).
-     */
     public static int sumDigits(int n) {
         int sum = 0;
         while (n > 0) {
@@ -713,17 +683,16 @@ public final class Question10 {
 
 ## Question 11
 
+The following code prints all strings of length k where the characters are in sorted order. It does this by
+generating all strings of length k and then checking if each is sorted. What is its runtime?
+O(kc^k), where k is the length of the string and c is the number of characters in the alphabet. It takes O(c^k)
+time to generate each string. Then, we need to check that each of these is sorted, which takes O(k) time.
+
 ```java
 public final class Question11 {
 
     public static int numChars = 26;
 
-    /**
-     * The following code prints all strings of length k where the characters are in sorted order. It does this by
-     * generating all strings of length k and then checking if each is sorted. What is its runtime?
-     * O(kc^k), where k is the length of the string and c is the number of characters in the alphabet. It takes O(c^k)
-     * time to generate each string. Then, we need to check that each of these is sorted, which takes O(k) time.
-     */
     public static void printSortedStrings(final int remaining) {
         printSortedStrings(remaining, "");
     }
@@ -758,6 +727,12 @@ public final class Question11 {
 ```
 
 ## Question 12
+
+The following code computes the intersection (the number of elements in common) of two arrays.
+It assumes that neither array has duplicates. It computes the intersection by sorting one array (array b) and
+then iterating through array a checking (via binary search) if each value is in b. What is its runtime?
+O(b log b + a log b). First, we have to sort array b,which takes O(b log b) time.Then, for each element in a,
+we do binary search in O(log b) time. The second part takes O(a log b) time.
 
 ```java
 public final class Question12 {
@@ -823,14 +798,7 @@ public final class Question12 {
             array[current + i] = helper[helperLeft + i];
         }
     }
-
-    /**
-     * The following code computes the intersection (the number of elements in common) of two arrays.
-     * It assumes that neither array has duplicates. It computes the intersection by sorting one array (array b) and
-     * then iterating through array a checking (via binary search) if each value is in b. What is its runtime?
-     * O(b log b + a log b). First, we have to sort array b,which takes O(b log b) time.Then, for each element in a,
-     * we do binary search in O(log b) time. The second part takes O(a log b) time.
-     */
+    
     public static int intersection(final int[] a, final int[] b) {
         mergesort(b);
         int intersect = 0;
