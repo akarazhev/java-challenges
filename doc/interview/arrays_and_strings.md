@@ -61,8 +61,8 @@ Tests are here:
 ### Statement
 
 Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the
-end to hold the additional characters,and that you are given the "true" length of the string.
-(Note: Please use a character array so that you can perform this operation in place.)
+end to hold the additional characters, and that you are given the "true" length of the string. (Note: Please use a 
+character array so that you can perform this operation in place.)
 
 #### Hints
 
@@ -102,13 +102,7 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
-
-.
-
-#### Space complexity
-
-.
+This algorithm takes O(N) time, where N is the length of the string.
 
 ## One Away
 
@@ -117,11 +111,12 @@ Tests are here:
 There are three types of edits that can be performed on strings: insert a character, remove a character, or replace
 a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
 
-#### Hints #23., #97., #130.
+#### Hints
 
-- .
-- .
-- .
+- Start with the easy thing. Can you check each of the conditions separately?
+- What is the relationship between the "insert character" option and the "remove character" option? Do these need to be 
+  two separate checks?
+- Can you do all three checks in a single pass?
 
 #### Solution
 
@@ -134,13 +129,7 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
-
-.
-
-#### Space complexity
-
-.
+This algorithm (and almost any reasonable algorithm) takes O (n) time, where n is the length of the shorter string.
 
 ## String Compression
 
@@ -150,11 +139,10 @@ Implement a method to perform basic string compression using the counts of repea
 aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the original string,
 your method should return the original string. You can assume the string has only uppercase and lowercase letters (a - z).
 
-#### Hints #92., #110.
+#### Hints
 
-- .
-- .
-- .
+- Do the easy thing first. Compress the string, then compare the lengths.
+- Be careful that you aren't repeatedly concatenating strings together. This can be very inefficient.
 
 #### Solution
 
@@ -165,13 +153,9 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
-
-.
-
-#### Space complexity
-
-.
+The runtime is O(p + k^2), where p is the size of the original string and k is the l number of character sequences. 
+For example, if the string is aabccdeeaa, then there are six characte sequences. It's slow because string concatenation 
+operates in O(n^2) time.
 
 ## Rotate Matrix
 
@@ -180,11 +164,11 @@ Tests are here:
 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the
 image by 90 degrees. Can you do this in place?
 
-#### Hints #51., #100.
+#### Hints
 
-- .
-- .
-- .
+- Try thinking about it layer by layer. Can you rotate a specific layer?
+- Rotating a specific layer would just mean swapping the values in four arrays. If you were asked to swap the values 
+  in two arrays, could you do this? Can you then extend it to four arrays?
 
 #### Solution
 
@@ -195,13 +179,7 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
-
-.
-
-#### Space complexity
-
-.
+This algorithm is O(N^2), which is the best we can do since any algorithm must touch all N^2 elements.
 
 ## Zero Matrix
 
@@ -209,11 +187,14 @@ Tests are here:
 
 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
 
-#### Hints #17., #74., #102.
+#### Hints
 
-- .
-- .
-- .
+- If you just cleared the rows and columns as you found Os, you'd likely wind up clearing the whole matrix. 
+  Try finding the cells with zeros first before making any changes to the matrix.
+- Can you use O(N) additional space instead of O(N2 )? What information do you really need from the list of cells that 
+  are zero?
+- You probably need some data storage to maintain a list of the rows and columns that need to be zeroed. Can you reduce 
+  the additional space usage to 0(1) by using the matrix itself for data storage?
 
 #### Solution
 
@@ -224,21 +205,20 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
+One way around this is to keep a second matrix which flags the zero locations. We would then do a second pass through 
+the matrix to set the zeros.This would take O(MN) space.
 
-.
-
-#### Space complexity
-
-.
+To make this somewhat more space efficient we could use a bit vector instead of a boolean array. It would still be O(N) space.
+We can reduce the space to 0(1) by using the first row as a replacement for the row array and the first column as a 
+replacement for the column array.
 
 ## String Rotation
 
 ### Statement
 
 Assume you have a method isSubstring which checks if one word is a substring of another. Given two strings, sl and s2,
-write code to check if s2 is a rotation of sl using only one call to isSubstring
-(e.g.,"waterbottle" is a rotation of"erbottlewat").
+write code to check if s2 is a rotation of sl using only one call to isSubstring (e.g.,"waterbottle" is a rotation of 
+"erbottlewat").
 
 #### Hints
 
@@ -262,13 +242,8 @@ Tests are here:
 
 ### Complexity
 
-#### Time complexity
-
-.
-
-#### Space complexity
-
-.
+The runtime of this varies based on the runtime of isSubstring. But if you assume that isSubstring runs in O(A+B) time 
+(on strings of length A and B), then the runtime of isRotation is O(N).
 
 <hr>
 
