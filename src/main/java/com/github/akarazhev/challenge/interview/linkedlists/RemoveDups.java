@@ -5,6 +5,9 @@ import com.github.akarazhev.challenge.interview.util.LinkedListNode;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Statement:
+ */
 public final class RemoveDups {
 
     /**
@@ -76,6 +79,7 @@ public final class RemoveDups {
                          * earlier. */
                         break;
                     }
+
                     runner = runner.next;
                 }
 
