@@ -2,6 +2,9 @@ package com.github.akarazhev.challenge.interview.linkedlists;
 
 import com.github.akarazhev.challenge.interview.util.LinkedListNode;
 
+/**
+ * Statement:
+ */
 public final class DeleteMiddleNode {
 
     public static boolean deleteNode(final LinkedListNode n) {
