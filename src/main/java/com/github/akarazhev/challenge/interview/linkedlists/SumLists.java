@@ -2,6 +2,9 @@ package com.github.akarazhev.challenge.interview.linkedlists;
 
 import com.github.akarazhev.challenge.interview.util.LinkedListNode;
 
+/**
+ * Statement:
+ */
 public final class SumLists {
 
     /**
@@ -9,11 +12,11 @@ public final class SumLists {
      */
     static final class FirstSolution {
 
-        private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
+        public static LinkedListNode addLists(final LinkedListNode l1, final LinkedListNode l2) {
             return addLists(l1, l2, 0);
         }
 
-        private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
+        private static LinkedListNode addLists(final LinkedListNode l1, final LinkedListNode l2, final int carry) {
             if (l1 == null && l2 == null && carry == 0) {
                 return null;
             }
@@ -39,7 +42,7 @@ public final class SumLists {
             return result;
         }
 
-        public static int linkedListToInt(LinkedListNode node) {
+        public static int linkedListToInt(final LinkedListNode node) {
             int value = 0;
             if (node.next != null) {
                 value = 10 * linkedListToInt(node.next);
@@ -54,12 +57,12 @@ public final class SumLists {
      */
     static final class SecondSolution {
 
-        public static class PartialSum {
+        public final static class PartialSum {
             public LinkedListNode sum = null;
             public int carry = 0;
         }
 
-        private static int length(LinkedListNode l) {
+        private static int length(final LinkedListNode l) {
             if (l == null) {
                 return 0;
             } else {
@@ -67,21 +70,19 @@ public final class SumLists {
             }
         }
 
-        private static PartialSum addListsHelper(LinkedListNode l1, LinkedListNode l2) {
+        private static PartialSum addListsHelper(final LinkedListNode l1, final LinkedListNode l2) {
             if (l1 == null && l2 == null) {
-                PartialSum sum = new PartialSum();
-                return sum;
+                return new PartialSum();
             }
 
             PartialSum sum = addListsHelper(l1.next, l2.next);
             int val = sum.carry + l1.data + l2.data;
-            LinkedListNode full_result = insertBefore(sum.sum, val % 10);
-            sum.sum = full_result;
+            sum.sum = insertBefore(sum.sum, val % 10);
             sum.carry = val / 10;
             return sum;
         }
 
-        private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
+        public static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
             int len1 = length(l1);
             int len2 = length(l2);
             if (len1 < len2) {
@@ -94,12 +95,11 @@ public final class SumLists {
             if (sum.carry == 0) {
                 return sum.sum;
             } else {
-                LinkedListNode result = insertBefore(sum.sum, sum.carry);
-                return result;
+                return insertBefore(sum.sum, sum.carry);
             }
         }
 
-        private static LinkedListNode padList(LinkedListNode l, int padding) {
+        private static LinkedListNode padList(final LinkedListNode l, final int padding) {
             LinkedListNode head = l;
             for (int i = 0; i < padding; i++) {
                 head = insertBefore(head, 0);
@@ -108,7 +108,7 @@ public final class SumLists {
             return head;
         }
 
-        private static LinkedListNode insertBefore(LinkedListNode list, int data) {
+        private static LinkedListNode insertBefore(final LinkedListNode list, final int data) {
             LinkedListNode node = new LinkedListNode(data);
             if (list != null) {
                 node.next = list;
