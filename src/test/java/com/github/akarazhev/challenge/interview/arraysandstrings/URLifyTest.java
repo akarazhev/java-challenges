@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * (Note: Please use a character array so that you can perform this operation in place.)
  */
 @DisplayName("URLify String Test")
-public class URLifyTest {
+public final class URLifyTest {
 
     @Test
     @DisplayName("Test Replace Spaces")

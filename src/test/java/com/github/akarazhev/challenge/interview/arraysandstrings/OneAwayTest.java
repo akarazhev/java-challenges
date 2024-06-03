@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * (or zero edits) away.
  */
 @DisplayName("One Away String Test")
-public class OneAwayTest {
+public final class OneAwayTest {
 
     @Test
     @DisplayName("Test First Solution")

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
  */
 @DisplayName("Rotate Matrix Test")
-public class RotateMatrixTest {
+public final class RotateMatrixTest {
 
     @Test
     @DisplayName("Test Rotate")

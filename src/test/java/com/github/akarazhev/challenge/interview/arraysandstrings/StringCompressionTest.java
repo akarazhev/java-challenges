@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * uppercase and lowercase letters (a - z).
  */
 @DisplayName("String Compression Test")
-public class StringCompressionTest {
+public final class StringCompressionTest {
 
     @Test
     @DisplayName("Test First Solution")

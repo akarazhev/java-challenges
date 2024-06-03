@@ -5,10 +5,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
- * Provides tests for the <code>Zero Matrix</code> solution.
+ * Provides tests for the statement:
+ * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
  */
 @DisplayName("Zero Matrix Test")
-public class ZeroMatrixTest {
+public final class ZeroMatrixTest {
 
     @Test
     @DisplayName("Test First Solution")

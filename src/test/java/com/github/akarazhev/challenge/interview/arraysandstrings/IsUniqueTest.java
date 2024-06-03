@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * What if you cannot use additional data structures?
  */
 @DisplayName("Is Unique String Test")
-public class IsUniqueTest {
+public final class IsUniqueTest {
 
     @Test
     @DisplayName("Test First Solution")

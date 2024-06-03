@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * isSubstring (e.g.,"waterbottle" is a rotation of"erbottlewat").
  */
 @DisplayName("String Rotation Test")
-public class StringRotationTest {
+public final class StringRotationTest {
 
     @Test
     @DisplayName("Test Is Rotation")

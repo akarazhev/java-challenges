@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * The palindrome does not need to be limited to just dictionary words.
  */
 @DisplayName("Palindrome String Permutation Test")
-public class PalindromePermutationTest {
+public final class PalindromePermutationTest {
 
     @Test
     @DisplayName("Test First Solution")

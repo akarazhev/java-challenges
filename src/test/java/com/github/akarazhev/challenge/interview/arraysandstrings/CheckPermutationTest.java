@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Given two strings, write a method to decide if one is a permutation of the other.
  */
 @DisplayName("Check String Permutation Test")
-public class CheckPermutationTest {
+public final class CheckPermutationTest {
 
     @Test
     @DisplayName("Test First Solution")
