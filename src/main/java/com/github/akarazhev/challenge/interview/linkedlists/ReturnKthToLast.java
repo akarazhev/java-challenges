@@ -31,7 +31,7 @@ public final class ReturnKthToLast {
      */
     static final class SecondSolution {
 
-        private static class Index {
+        private final static class Index {
             public int value = 0;
         }
 
