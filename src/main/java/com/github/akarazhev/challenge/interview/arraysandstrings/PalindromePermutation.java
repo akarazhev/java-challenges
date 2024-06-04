@@ -11,6 +11,9 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  */
 public final class PalindromePermutation {
 
+    /**
+     * Common code
+     */
     private final static class Common {
 
         private static int getCharNumber(final Character c) {

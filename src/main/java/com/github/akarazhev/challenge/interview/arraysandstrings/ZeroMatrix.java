@@ -5,6 +5,9 @@ package com.github.akarazhev.challenge.interview.arraysandstrings;
  */
 public final class ZeroMatrix {
 
+    /**
+     * Common code
+     */
     private final static class Common {
 
         private static void nullifyRow(final int[][] matrix, final int row) {
@@ -18,33 +21,6 @@ public final class ZeroMatrix {
                 matrix[i][col] = 0;
             }
         }
-
-        private static boolean matricesAreEqual(final int[][] m1, final int[][] m2) {
-            if (m1.length != m2.length || m1[0].length != m2[0].length) {
-                return false;
-            }
-
-            for (int k = 0; k < m1.length; k++) {
-                for (int j = 0; j < m1[0].length; j++) {
-                    if (m1[k][j] != m2[k][j]) {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
-        }
-
-        private static int[][] cloneMatrix(final int[][] matrix) {
-            int[][] c = new int[matrix.length][matrix[0].length];
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix[0].length; j++) {
-                    c[i][j] = matrix[i][j];
-                }
-            }
-
-            return c;
-        }
     }
 
     /**
@@ -52,6 +28,9 @@ public final class ZeroMatrix {
      */
     static final class FirstSolution {
 
+        /**
+         * This function takes a matrix and set zeros.
+         */
         public static void setZeros(final int[][] matrix) {
             boolean[] row = new boolean[matrix.length];
             boolean[] column = new boolean[matrix[0].length];
@@ -84,6 +63,9 @@ public final class ZeroMatrix {
      */
     static final class SecondSolution {
 
+        /**
+         * This function takes a matrix and set zeros.
+         */
         public static void setZeros(final int[][] matrix) {
             boolean rowHasZero = false;
             boolean colHasZero = false;
