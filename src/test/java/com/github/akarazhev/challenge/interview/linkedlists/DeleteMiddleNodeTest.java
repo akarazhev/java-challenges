@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public final class DeleteMiddleNodeTest {
 
     @Test
-    @DisplayName("test Delete Node")
+    @DisplayName("Test Delete Node")
     void testDeleteNode() {
         LinkedListNode head = AssortedMethods.randomLinkedList(10, 0, 10);
         System.out.println(head.printForward());
