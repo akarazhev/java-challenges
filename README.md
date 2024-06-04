@@ -34,4 +34,5 @@ related patterns to solve a diverse range of problems.
 
 - [Big O](doc/interview/big_o "Big O")
 - [Technical Questions](doc/interview/technical_questions.md "Technical Questions")
-- [Arrays and Strings](doc/interview/arrays_and_strings "Arrays and Strings")
+- [Arrays and Strings](doc/interview/arrays_and_strings.md "Arrays and Strings")
+- [Linked Lists](doc/interview/linked_lists.md "Linked Lists")
