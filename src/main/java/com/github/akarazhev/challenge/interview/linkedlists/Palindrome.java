@@ -4,6 +4,9 @@ import com.github.akarazhev.challenge.interview.util.LinkedListNode;
 
 import java.util.Stack;
 
+/**
+ * Statement:
+ */
 public final class Palindrome {
 
     /**
@@ -81,7 +84,7 @@ public final class Palindrome {
      */
     static final class ThirdSolution {
 
-        public static class Result {
+        public final static class Result {
             public LinkedListNode node;
             public boolean result;
             public Result(LinkedListNode n, boolean res) {
