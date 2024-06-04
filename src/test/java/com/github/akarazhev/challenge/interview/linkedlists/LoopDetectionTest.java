@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public final class LoopDetectionTest {
 
     @Test
-    @DisplayName("Test FindBeginning")
+    @DisplayName("Test Find Beginning")
     void testFindBeginning() {
         int listLength = 100;
         // Create linked list
