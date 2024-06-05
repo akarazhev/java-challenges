@@ -7,7 +7,7 @@ import com.github.akarazhev.challenge.interview.util.LinkedListNode;
  */
 public final class Intersection {
 
-    public final static class Result {
+    private final static class Result {
         public final LinkedListNode tail;
         public final int size;
 
@@ -17,7 +17,7 @@ public final class Intersection {
         }
     }
 
-    public static Result getTailAndSize(final LinkedListNode list) {
+    private static Result getTailAndSize(final LinkedListNode list) {
         if (list == null) {
             return null;
         }
@@ -32,7 +32,7 @@ public final class Intersection {
         return new Result(current, size);
     }
 
-    public static LinkedListNode getKthNode(final LinkedListNode head, int k) {
+    private static LinkedListNode getKthNode(final LinkedListNode head, int k) {
         LinkedListNode current = head;
         while (k > 0 && current != null) {
             current = current.next;
@@ -42,6 +42,9 @@ public final class Intersection {
         return current;
     }
 
+    /**
+     * This function
+     */
     public static LinkedListNode findIntersection(final LinkedListNode list1, final LinkedListNode list2) {
         if (list1 == null || list2 == null) {
             return null;

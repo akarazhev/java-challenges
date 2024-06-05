@@ -7,6 +7,9 @@ import com.github.akarazhev.challenge.interview.util.LinkedListNode;
  */
 public final class DeleteMiddleNode {
 
+    /**
+     * This function
+     */
     public static boolean deleteNode(final LinkedListNode n) {
         if (n == null || n.next == null) {
             return false; // Failure

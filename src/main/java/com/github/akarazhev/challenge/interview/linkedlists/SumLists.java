@@ -12,6 +12,9 @@ public final class SumLists {
      */
     static final class FirstSolution {
 
+        /**
+         * This function
+         */
         public static LinkedListNode addLists(final LinkedListNode l1, final LinkedListNode l2) {
             return addLists(l1, l2, 0);
         }
@@ -42,6 +45,9 @@ public final class SumLists {
             return result;
         }
 
+        /**
+         * This function
+         */
         public static int linkedListToInt(final LinkedListNode node) {
             int value = 0;
             if (node.next != null) {
@@ -82,6 +88,9 @@ public final class SumLists {
             return sum;
         }
 
+        /**
+         * This function
+         */
         public static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
             int len1 = length(l1);
             int len2 = length(l2);
@@ -117,6 +126,9 @@ public final class SumLists {
             return node;
         }
 
+        /**
+         * This function
+         */
         public static int linkedListToInt(LinkedListNode node) {
             int value = 0;
             while (node != null) {

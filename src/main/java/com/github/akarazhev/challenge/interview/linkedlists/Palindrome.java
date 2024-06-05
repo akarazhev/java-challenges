@@ -14,12 +14,15 @@ public final class Palindrome {
      */
     static final class FirstSolution {
 
+        /**
+         * This function
+         */
         public static boolean isPalindrome(LinkedListNode head) {
             LinkedListNode reversed = reverseAndClone(head);
             return isEqual(head, reversed);
         }
 
-        public static LinkedListNode reverseAndClone(LinkedListNode node) {
+        private static LinkedListNode reverseAndClone(LinkedListNode node) {
             LinkedListNode head = null;
             while (node != null) {
                 LinkedListNode n = new LinkedListNode(node.data); // Clone
@@ -31,7 +34,7 @@ public final class Palindrome {
             return head;
         }
 
-        public static boolean isEqual(LinkedListNode one, LinkedListNode two) {
+        private static boolean isEqual(LinkedListNode one, LinkedListNode two) {
             while (one != null && two != null) {
                 if (one.data != two.data) {
                     return false;
@@ -50,6 +53,9 @@ public final class Palindrome {
      */
     static final class SecondSolution {
 
+        /**
+         * This function
+         */
         public static boolean isPalindrome(LinkedListNode head) {
             LinkedListNode fast = head;
             LinkedListNode slow = head;
@@ -84,7 +90,7 @@ public final class Palindrome {
      */
     static final class ThirdSolution {
 
-        public final static class Result {
+        private final static class Result {
             public LinkedListNode node;
             public boolean result;
             public Result(LinkedListNode n, boolean res) {
@@ -93,7 +99,7 @@ public final class Palindrome {
             }
         }
 
-        public static Result isPalindromeRecurse(LinkedListNode head, int length) {
+        private static Result isPalindromeRecurse(LinkedListNode head, int length) {
             if (head == null || length <= 0) { // Even number of nodes
                 return new Result(head, true);
             } else if (length == 1) { // Odd number of nodes
@@ -117,7 +123,7 @@ public final class Palindrome {
             return res;
         }
 
-        public static int lengthOfList(LinkedListNode n) {
+        private static int lengthOfList(LinkedListNode n) {
             int size = 0;
             while (n != null) {
                 size++;
@@ -127,6 +133,9 @@ public final class Palindrome {
             return size;
         }
 
+        /**
+         * This function
+         */
         public static boolean isPalindrome(LinkedListNode head) {
             int length = lengthOfList(head);
             Result p = isPalindromeRecurse(head, length);

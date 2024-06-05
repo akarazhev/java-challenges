@@ -7,6 +7,9 @@ import com.github.akarazhev.challenge.interview.util.LinkedListNode;
  */
 public final class LoopDetection {
 
+    /**
+     * This function
+     */
     public static LinkedListNode FindBeginning(final LinkedListNode head) {
         LinkedListNode slow = head;
         LinkedListNode fast = head;

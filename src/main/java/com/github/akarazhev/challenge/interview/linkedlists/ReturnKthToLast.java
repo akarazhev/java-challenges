@@ -12,6 +12,9 @@ public final class ReturnKthToLast {
      */
     static final class FirstSolution {
 
+        /**
+         * This function
+         */
         public static int printKthToLast(final LinkedListNode head, final int k) {
             if (head == null) {
                 return 0;
@@ -35,6 +38,9 @@ public final class ReturnKthToLast {
             public int value = 0;
         }
 
+        /**
+         * This function
+         */
         public static LinkedListNode kthToLast(final LinkedListNode head, final int k) {
             Index idx = new Index();
             return kthToLast(head, k, idx);
@@ -60,6 +66,9 @@ public final class ReturnKthToLast {
      */
     static final class ThirdSolution {
 
+        /**
+         * This function
+         */
         public static LinkedListNode nthToLast(final LinkedListNode head, final int k) {
             LinkedListNode p1 = head;
             LinkedListNode p2 = head;

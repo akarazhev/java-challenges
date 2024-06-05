@@ -12,6 +12,9 @@ public final class Partition {
      */
     static final class FirstSolution {
 
+        /**
+         * This function
+         */
         public static LinkedListNode partition(LinkedListNode node, final int x) {
             LinkedListNode beforeStart = null;
             LinkedListNode beforeEnd = null;
@@ -58,6 +61,9 @@ public final class Partition {
      */
     static final class SecondSolution {
 
+        /**
+         * This function
+         */
         public static LinkedListNode partition(LinkedListNode node, final int x) {
             LinkedListNode beforeStart = null;
             LinkedListNode afterStart = null;
@@ -97,6 +103,9 @@ public final class Partition {
      */
     static final class ThirdSolution {
 
+        /**
+         * This function
+         */
         public static LinkedListNode partition(LinkedListNode node, final int x) {
             LinkedListNode head = node;
             LinkedListNode tail = node;

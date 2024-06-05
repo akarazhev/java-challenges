@@ -15,6 +15,9 @@ public final class RemoveDups {
      */
     static final class FirstSolution {
 
+        /**
+         * This function
+         */
         public static void deleteDups(LinkedListNode n) {
             Set<Integer> set = new HashSet<>();
             LinkedListNode previous = null;
@@ -36,6 +39,9 @@ public final class RemoveDups {
      */
     static final class SecondSolution {
 
+        /**
+         * This function
+         */
         public static void deleteDups(final LinkedListNode head) {
             LinkedListNode current = head;
             while (current != null) {
@@ -59,6 +65,9 @@ public final class RemoveDups {
      */
     static final class ThirdSolution {
 
+        /**
+         * This function
+         */
         public static void deleteDups(final LinkedListNode head) {
             if (head == null) {
                 return;
@@ -82,7 +91,6 @@ public final class RemoveDups {
 
                     runner = runner.next;
                 }
-
                 /* If runner == current, then we didn't find any duplicate
                  * elements in the previous for loop.  We then need to
                  * increment current.
