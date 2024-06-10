@@ -16,7 +16,9 @@ public final class Question11 {
 
     private static void printSortedStrings(final int remaining, final String prefix) {
         if (remaining == 0) {
-            System.out.println(prefix);
+            if (isInOrder(prefix)) {
+                System.out.println(prefix);
+            }
         } else {
             for (int i = 0; i < numChars; i++) {
                 char c = ithLetter(i);
